@@ -1,0 +1,8 @@
+{
+  "name": "lumi6eqwebsite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp -r index.html styles images js vercel.json dist 2>/dev/null || cp -R index.html styles images js vercel.json dist"
+  }
+}
