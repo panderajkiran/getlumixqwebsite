@@ -1,4 +1,4 @@
 {
-  "buildCommand": "mkdir -p dist && cp -r index.html styles images js vercel.json dist 2>/dev/null || cp -R index.html styles images js vercel.json dist",
+  "buildCommand": "mkdir -p dist && cp -r index.html styles js vercel.json dist 2>/dev/null || cp -R index.html styles js vercel.json dist",
   "outputDirectory": "dist"
 }
