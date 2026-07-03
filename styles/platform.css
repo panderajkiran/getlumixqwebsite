@@ -1,0 +1,370 @@
+/* =============================================================
+   SECTION 2: PLATFORM SECTION STYLING
+============================================================= */
+.platform-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/4%20comprsd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fffbf2; /* Cream text */
+  padding: 140px 8% 100px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.platform-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Left Column: Description info */
+.platform-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.platform-tag {
+  font-family: 'Inter', sans-serif; /* Inter for Labels */
+  font-size: 0.75rem;
+  font-weight: 500; /* Inter 500 (Medium) */
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0b192c; /* Deep slate charcoal */
+}
+
+.platform-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for Section Headings */
+  font-size: 2.8rem; /* ~45px (Section Title 42-52px range) */
+  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #0b192c; /* Deep slate charcoal */
+}
+
+.platform-description {
+  font-family: 'Inter', sans-serif; /* Inter for Reading */
+  font-size: 1.15rem; /* ~18px (Body 18-20px range) */
+  font-weight: 400; /* Inter 400 (Regular) */
+  line-height: 1.6;
+  color: rgba(11, 25, 44, 0.8); /* Dark slate body text */
+  max-width: 460px;
+}
+
+
+/* -------------------------------------------------------------
+   RIGHT COLUMN: INTEGRATED VIDEO CONTAINER & BACKDROP
+------------------------------------------------------------- */
+.platform-video-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.platform-video-wrapper {
+  position: relative;
+  width: 680px;
+  height: 382px; /* 16:9 ratio */
+  max-width: 100%;
+}
+
+.platform-video-wrapper .hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  z-index: 2; /* Sits in front */
+}
+
+/* Spinner indicator shown while loading video */
+.platform-video-wrapper .hero-video-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #fffbf2;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.platform-video-wrapper .hero-video-container.video-loading::before {
+  opacity: 1;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.platform-video-wrapper .hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0; /* Hidden initially while loading */
+  transition: opacity 0.8s ease;
+}
+
+.platform-video-wrapper .hero-video-container.video-playing .hero-video {
+  opacity: 1; /* Fade-in smoothly once playing begins */
+}
+
+
+
+/* -------------------------------------------------------------
+   FOOTER CALLOUT
+------------------------------------------------------------- */
+.platform-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 720px;
+  z-index: 3;
+}
+
+.platform-callout {
+  font-family: 'Inter', sans-serif; /* Inter for Reading / Callouts */
+  font-size: 1.25rem; /* ~20px (Body 18-20px range) */
+  font-weight: 500; /* Inter 500 (Medium) */
+  line-height: 1.45;
+  color: #0b192c; /* Deep slate charcoal */
+  letter-spacing: -0.01em;
+}
+
+
+/* -------------------------------------------------------------
+   RESPONSIVE DESIGN BREAKPOINTS
+------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .platform-section {
+    padding: 100px 6% 80px 6%;
+  }
+  
+  .platform-heading {
+    font-size: 2.7rem;
+  }
+  
+  .platform-container {
+    gap: 40px;
+  }
+  
+  .platform-video-wrapper {
+    width: 520px;
+    height: 292px;
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .platform-info {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .platform-heading {
+    font-size: 2.2rem;
+  }
+  
+  .platform-video-wrapper {
+    margin: 0 auto;
+    width: 480px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 560px) {
+  .platform-video-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* =============================================================
+   SECTION 3: CONCLUDING CTA SECTION STYLING
+============================================================= */
+.cta-section {
+  position: relative;
+  min-height: 80vh;
+  width: 100vw;
+  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/5%20comprsd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #0b192c; /* Deep slate charcoal text */
+  padding: 120px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(11, 25, 44, 0.08);
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.cta-compass-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-compass-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 35px rgba(11, 25, 44, 0.15));
+  animation: ctaCompassFloat 6s ease-in-out infinite;
+}
+
+@keyframes ctaCompassFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+.cta-powerline {
+  font-family: 'Outfit', sans-serif; /* Outfit for Massive Section Statements */
+  font-size: 3.2rem; /* ~51px (Section Title 42-52px range) */
+  font-weight: 700; /* Outfit 700 (Bold) */
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0b192c; /* Deep slate charcoal */
+  max-width: 680px;
+}
+
+/* Try Demo CTA Button */
+.btn-demo-cta {
+  background: #0b192c; /* Deep slate charcoal */
+  color: #fffbf2; /* Cream text */
+  border: 1px solid #0b192c;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for buttons */
+  font-size: 1.05rem; /* ~17px (Small 15-16px / body range) */
+  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(11, 25, 44, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-demo-cta:hover {
+  background: transparent;
+  color: #0b192c;
+  border-color: #0b192c;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(11, 25, 44, 0.1);
+}
+
+@media (max-width: 768px) {
+  .cta-powerline {
+    font-size: 2rem;
+  }
+  
+  .cta-compass-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Startup Recognition Banner Elements */
+.recognition-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
+.recognition-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(11, 25, 44, 0.45); /* Soft slate gray */
+}
+
+.recognition-banners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  width: 100%;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.banner-item:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.banner-logo {
+  height: 100%;
+  max-width: 150px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .recognition-banners {
+    gap: 32px;
+  }
+  .banner-item {
+    height: 26px;
+  }
+}

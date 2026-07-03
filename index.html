@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visual showcase.">
+  <title>lumi6 | Showcase</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/variables.css?v=1">
+  <link rel="stylesheet" href="styles/navbar.css?v=5">
+  <link rel="stylesheet" href="styles/hero.css?v=76">
+  <link rel="stylesheet" href="styles/platform.css?v=12">
+  <link rel="stylesheet" href="styles/faq.css?v=5">
+</head>
+
+<body>
+  <!-- Grainy Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Adaptive Scroll-to-Capsule Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img class="logo-compass" src="images/compass.svg?v=1" alt="Compass Icon">
+        <span class="logo-text">lumi6</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#platform" class="nav-link active">Platform</a></li>
+        <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+        <li><a href="#" class="nav-link">Use cases</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-signin">Sign In</a>
+        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-demo">Try Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section 1: Hero Takeover (Scroll Target) -->
+  <div class="takeover-container" id="hero">
+    <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/6%20comprsd.png?v=1"
+      alt="Showcase Background" class="takeover-img">
+    <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/clouds.svg" alt="Floating Cloud"
+      class="floating-cloud">
+
+    <!-- Absolute-positioned Hero Content -->
+    <div class="hero-content">
+      <!-- Left-aligned Hero Content Stack -->
+      <div class="hero-text-stack">
+        <!-- Trust Rating Badge -->
+        <div class="hero-trust-badge">
+          <span class="star-rating">★★★★★</span>
+          <span>Trusted by forward-thinking teams</span>
+        </div>
+
+        <h1 class="hero-heading">Practice Before<br>It Matters.</h1>
+        <p class="hero-description">
+          Turn training into real-world performance. Bridge the gap between theory and action with immersive,
+          interactive simulations that prepare your people for high-stakes conversations and decisions.
+        </p>
+        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-glass-hero"
+          style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>Book A Demo</span>
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- Right-aligned Video Wrapper -->
+      <div class="hero-video-wrapper">
+        <div class="video-card-container">
+          <video class="hero-video-element"
+            src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/hero%20section%20video.mp4" autoplay loop
+            muted playsinline></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Section 2: Platform Section (Scroll Target) -->
+  <section class="platform-section" id="platform">
+    <div class="platform-container">
+      <!-- Left Column: Description -->
+      <div class="platform-info">
+        <span class="platform-tag">The Platform</span>
+        <h2 class="platform-heading">The AI Native Platform for Human Capability</h2>
+        <p class="platform-description">Lumi6 transforms goals into personalized learning journeys. From
+          understanding each learner's context to generating realistic practice, delivering feedback, and adapting
+          every step, the platform helps people build workplace capability through continuous practice.</p>
+      </div>
+
+      <!-- Right Column: Product Video Player -->
+      <div class="platform-video-column">
+        <div class="platform-video-wrapper">
+          <div class="hero-video-container">
+            <video class="hero-video"
+              src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/product%20animation.mp4" autoplay loop
+              muted playsinline></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Philosophical Callout -->
+    <div class="platform-footer">
+      <p class="platform-callout">Capability isn't taught. It's built through personalized practice, timely feedback,
+        and
+        real-world application.</p>
+    </div>
+  </section>
+
+  <!-- Section 2.5: FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="faq-container">
+      <!-- Left Column: Heading Info -->
+      <div class="faq-info">
+        <span class="faq-tag">FAQ</span>
+        <h2 class="faq-heading">Common Questions</h2>
+        <p class="faq-description">Everything you need to know about Lumi6, the intelligent platform for workplace
+          capability.</p>
+      </div>
+
+      <!-- Right Column: Accordion -->
+      <div class="faq-accordion">
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How is Lumi6 different from other AI roleplay platforms?</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <div class="faq-answer">
+              Most AI roleplay platforms focus on individual conversations. Lumi6 is built around Compass, an
+              intelligent learning agent that understands both the learner and the organization. It remembers previous
+              interactions, tracks progress over time, learns company knowledge, and continuously personalizes learning,
+              practice, and feedback. Every experience becomes more relevant with every session.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How does Compass personalize learning?</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <div class="faq-answer">
+              Compass understands each learner's role, goals, strengths, challenges, and previous performance before
+              creating a learning journey. It continuously updates its understanding through practice sessions,
+              feedback, and progress, ensuring every learner follows the path that's right for them.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Can Lumi6 understand our company's products and processes?</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <div class="faq-answer">
+              Yes. Compass can learn your products, services, policies, frameworks, competencies, and internal knowledge
+              so every simulation and coaching session reflects your organization's real workplace environment instead
+              of generic scenarios.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>What capabilities can employees build with Lumi6?</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <div class="faq-answer">
+              Teams can develop communication, leadership, sales, customer service, negotiation, emotional intelligence,
+              critical thinking, decision making, problem solving, and many other workplace capabilities. Organizations
+              can also create custom capability programs tailored to their business.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How do you measure improvement?</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <div class="faq-answer">
+              Every learning experience generates detailed feedback and capability insights. Managers can track learner
+              progress, identify strengths and development areas, and understand how capability grows over time instead
+              of simply tracking completed activities.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How do we get started?</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <div class="faq-answer">
+              Book a demo with our team to explore how Lumi6 can support your organization. We'll understand your goals,
+              show you how the platform works, and help design a personalized rollout for your teams.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Concluding CTA Section -->
+  <section class="cta-section" id="capabilities">
+    <div class="cta-container">
+      <div class="cta-compass-wrapper">
+        <img class="cta-compass-img" src="images/compass.svg?v=1" alt="Floating Compass">
+      </div>
+      <h2 class="cta-powerline">Let the compass guide you towards capability.</h2>
+
+      <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-demo-cta" style="text-decoration: none;">See it in action</a>
+
+      <!-- Startup Recognition Banners -->
+      <div class="recognition-box" style="margin-top: 35px;">
+        <p class="recognition-title">Recognized & Supported by</p>
+        <div class="recognition-banners">
+          <div class="banner-item">
+            <img class="banner-logo"
+              src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/aws%20activate%20preview.png"
+              alt="AWS Activate">
+          </div>
+          <div class="banner-item">
+            <img class="banner-logo"
+              src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/google%20for%20startups.png"
+              alt="Google for Startups">
+          </div>
+          <div class="banner-item">
+            <img class="banner-logo"
+              src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/startup%20india.png"
+              alt="Startup India">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js?v=8"></script>
+</body>
+
+</html>
