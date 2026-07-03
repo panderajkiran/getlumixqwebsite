@@ -5,7 +5,7 @@ const initVideoLoader = () => {
   const container = document.querySelector('.hero-video-container');
   if (!video || !container) return;
 
-  // Slow the video playback rate to 0.8 (makes the duration 1.25x longer / slows by 125%)
+  // Slow the video playback rate to 0.8
   video.playbackRate = 0.8;
 
   // Set loading class initially
@@ -17,11 +17,26 @@ const initVideoLoader = () => {
     container.classList.add('video-playing');
   });
 
-  // Fallback in case readyState is already loaded
-  if (video.readyState >= 3) {
-    container.classList.remove('video-loading');
-    container.classList.add('video-playing');
-  }
+  // Use IntersectionObserver to load and play when scrolled into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Load the src if not already loaded
+        if (!video.src && video.dataset.src) {
+          video.src = video.dataset.src;
+          video.load();
+        }
+        video.play().catch(err => console.log('Video play interrupted:', err));
+      } else {
+        // Pause when scrolled out of view to save CPU/resources
+        if (video.src) {
+          video.pause();
+        }
+      }
+    });
+  }, { threshold: 0.15 });
+
+  observer.observe(container);
 };
 
 const initHeroReveal = () => {
