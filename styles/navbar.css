@@ -181,12 +181,50 @@
 ------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav-container {
-    padding: 0 20px;
+    padding: 0 16px;
   }
   .nav-menu {
     display: none; /* Hide middle links on mobile for capsule cleanliness */
   }
+  .navbar {
+    height: 64px;
+  }
   .navbar.scrolled {
     width: 95%;
+    height: 56px;
+    top: 12px;
+    border-radius: 12px;
+  }
+  .navbar.scrolled .nav-container {
+    padding: 0 16px;
+  }
+  .btn-signin,
+  .btn-demo {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 12px;
+  }
+  .btn-signin,
+  .btn-demo {
+    padding: 7px 12px;
+    font-size: 0.75rem;
+  }
+  .nav-buttons {
+    gap: 8px;
+  }
+  .logo-compass {
+    width: 24px;
+    height: 24px;
+  }
+  .logo-text {
+    font-size: 1.1rem;
   }
 }

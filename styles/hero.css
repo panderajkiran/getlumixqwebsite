@@ -272,23 +272,44 @@
 }
 
 @media (max-width: 768px) {
+  /* Allow container to grow with stacked content */
+  .takeover-container {
+    height: auto;
+    min-height: 100vh;
+  }
+  .takeover-container .takeover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .hero-content {
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 140px 4% 40px 4%;
+    padding: 120px 5% 60px 5%;
     height: auto;
+    min-height: 100vh;
     overflow: visible;
   }
   .hero-heading {
-    font-size: 3.4rem; /* Scale down massive hero text on mobile */
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .hero-description {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 100%;
   }
   .hero-text-stack {
     position: relative;
     max-width: 100%;
     text-align: center;
     align-items: center;
+    gap: 20px;
   }
   .hero-revealed .hero-text-stack {
     transform: none;
@@ -296,29 +317,59 @@
   .hero-video-wrapper {
     position: relative;
     transform: none;
-    width: 92%;
-    max-width: 480px;
-    margin: 40px auto 40px auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 30px auto 0 auto;
     opacity: 1;
   }
   .hero-revealed .hero-video-wrapper {
     transform: none;
+  }
+  .video-card-container {
+    border-radius: 14px;
+  }
+  .hero-video-element {
+    border-radius: 14px;
+  }
+  .btn-glass-hero {
+    padding: 12px 26px;
+    font-size: 0.9rem;
+  }
+  .hero-trust-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  /* Hide cloud on mobile to reduce visual clutter */
+  .floating-cloud {
+    display: none;
   }
   .spacer-content h2 {
     font-size: 2rem;
   }
 }
 
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 110px 4% 40px 4%;
+  }
+  .hero-heading {
+    font-size: 2.1rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+}
+
 /* Floating Backdrop Cloud Layer */
 .floating-cloud {
-  position: absolute; /* Restored to absolute to float exclusively inside the hero container */
-  top: 54%; /* Moved down slightly to sit nicely behind body text */
+  position: absolute;
+  top: 54%;
   left: -5%;
-  width: 55vw; /* Made bigger to improve visibility */
+  width: 55vw;
   max-width: 700px;
   height: auto;
-  opacity: 0.7; /* Increased opacity to render clearly */
-  z-index: 5; /* Restored z-index for local layout */
+  opacity: 0.7;
+  z-index: 5;
   pointer-events: none;
   mix-blend-mode: normal;
   animation: floatCloud 18s ease-in-out infinite alternate;

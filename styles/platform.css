@@ -185,9 +185,14 @@
 }
 
 @media (max-width: 768px) {
+  .platform-section {
+    padding: 80px 5% 60px 5%;
+    min-height: auto;
+  }
+
   .platform-container {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
   }
   
   .platform-info {
@@ -196,13 +201,23 @@
   }
   
   .platform-heading {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .platform-description {
+    font-size: 1rem;
+    max-width: 100%;
   }
   
   .platform-video-wrapper {
     margin: 0 auto;
-    width: 480px;
-    height: 270px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .platform-callout {
+    font-size: 1.05rem;
   }
 }
 
@@ -211,6 +226,18 @@
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-section {
+    padding: 60px 4% 50px 4%;
+  }
+  .platform-heading {
+    font-size: 1.75rem;
+  }
+  .platform-description {
+    font-size: 0.95rem;
   }
 }
 
@@ -271,25 +298,25 @@
 }
 
 .cta-powerline {
-  font-family: 'Outfit', sans-serif; /* Outfit for Massive Section Statements */
-  font-size: 3.2rem; /* ~51px (Section Title 42-52px range) */
-  font-weight: 700; /* Outfit 700 (Bold) */
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  color: #0b192c; /* Deep slate charcoal */
+  color: #0b192c;
   max-width: 680px;
 }
 
 /* Try Demo CTA Button */
 .btn-demo-cta {
-  background: #0b192c; /* Deep slate charcoal */
-  color: #fffbf2; /* Cream text */
+  background: #0b192c;
+  color: #fffbf2;
   border: 1px solid #0b192c;
   padding: 16px 36px;
   border-radius: 50px;
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for buttons */
-  font-size: 1.05rem; /* ~17px (Small 15-16px / body range) */
-  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(11, 25, 44, 0.15);
   transition: all 0.3s ease;
@@ -304,13 +331,36 @@
 }
 
 @media (max-width: 768px) {
+  .cta-section {
+    padding: 80px 5%;
+    min-height: auto;
+  }
   .cta-powerline {
     font-size: 2rem;
   }
-  
   .cta-compass-wrapper {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
+  }
+  .cta-container {
+    gap: 28px;
+  }
+  .btn-demo-cta {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 60px 4%;
+  }
+  .cta-powerline {
+    font-size: 1.65rem;
+  }
+  .cta-compass-wrapper {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -329,7 +379,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: rgba(11, 25, 44, 0.45); /* Soft slate gray */
+  color: rgba(11, 25, 44, 0.45);
 }
 
 .recognition-banners {
@@ -362,9 +412,25 @@
 
 @media (max-width: 768px) {
   .recognition-banners {
-    gap: 32px;
+    gap: 24px;
   }
   .banner-item {
-    height: 26px;
+    height: 24px;
+  }
+  .banner-logo {
+    max-width: 120px;
   }
 }
+
+@media (max-width: 480px) {
+  .recognition-banners {
+    gap: 18px;
+  }
+  .banner-item {
+    height: 20px;
+  }
+  .banner-logo {
+    max-width: 100px;
+  }
+}
+
