@@ -10,7 +10,7 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  background-color: #000000;
+  background-color: #F9F7F2; /* Muted warm cream foundation background */
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
