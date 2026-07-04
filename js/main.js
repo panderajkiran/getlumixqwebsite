@@ -58,7 +58,7 @@ const initFAQ = () => {
 
     btn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-
+      
       // Close other open FAQ items
       faqItems.forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('active')) {
