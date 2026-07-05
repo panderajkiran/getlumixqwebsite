@@ -31,9 +31,7 @@
   margin-bottom: 25vh; /* Large margin spacing to allow vertical stacking overlay scroll build-up */
 }
 
-.product-folder-card:last-child {
-  margin-bottom: 0; /* No margin on the last stacked card */
-}
+
 
 /* Folder Tabs protruding from the top-left (with horizontal offsets) */
 .folder-tab {
