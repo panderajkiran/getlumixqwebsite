@@ -5,16 +5,29 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: #F9F7F2; /* Cream foundation background color */
   z-index: 10;
+  overflow: hidden; /* Prevent overflow on split background */
 }
 
-.takeover-container .takeover-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.hero-left-bg {
+  position: absolute;
+  top: 130px; /* Positioned ~1 cm below the navbar */
+  left: -5%; /* Shifted a little to the left to bleed off-screen */
+  width: 56vw; /* Widened to enclose text stack fully */
+  max-width: 780px; /* Increased max-width threshold */
+  height: calc(100vh - 170px); /* Tall enough to fit text and cloud while staying clear of bottom */
+  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/18%20comprsd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px; /* Soft rounded outer corners (3 visible sides) */
 }
+
 
 /* -------------------------------------------------------------
    ABSOLUTE HERO LAYOUT & TYPOGRAPHY
@@ -68,8 +81,13 @@
   position: relative;
   width: 48vw;
   max-width: 700px;
-  aspect-ratio: 16 / 9;
   z-index: 5;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center Book A Demo button under video */
+  margin-top: -24px; /* Shift the video card 0.5 cm (~24px) above */
   
   opacity: 0;
   transform: translateX(30px);
@@ -86,7 +104,7 @@
 
 .video-card-container {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
@@ -116,16 +134,14 @@
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(11, 25, 44, 0.08);
+  background-color: #fffbf2; /* Solid premium cream to make it more whole */
+  border: 1px solid rgba(11, 25, 44, 0.15);
   border-radius: 50px;
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   color: #0b192c;
-  box-shadow: 0 4px 12px rgba(11, 25, 44, 0.03);
+  box-shadow: 0 4px 14px rgba(11, 25, 44, 0.08);
 }
 
 .star-rating {
@@ -141,7 +157,7 @@
   font-family: 'Outfit', sans-serif; /* Outfit for Brand Moments */
   font-size: 4.5rem; /* ~72px (Hero 72-88px range) - slightly smaller for better layout fit */
   font-weight: 700; /* Outfit 700 (Bold) */
-  line-height: 0.95;
+  line-height: 1.08; /* Increased line-height for better word spacing */
   letter-spacing: -0.04em;
   color: #0b192c; /* Deep slate blue */
   text-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
@@ -151,27 +167,27 @@
   font-family: 'Inter', sans-serif; /* Inter for Reading */
   font-size: 1.15rem; /* ~18px (Body 18-20px range) */
   font-weight: 400; /* Inter 400 (Regular) */
-  line-height: 1.65;
+  line-height: 1.75; /* Increased spacing for better legibility */
   color: #1e293b; /* Premium slate gray */
   max-width: 480px; /* Kept slightly narrower for premium editorial hierarchy */
 }
 
 /* Book A Demo CTA Button */
 .btn-glass-hero {
-  align-self: flex-start;
+  align-self: center; /* Center horizontally under the video card */
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px; /* Increased gap */
   
-  padding: 14px 32px;
+  padding: 16px 36px; /* Increased padding to make button bigger */
   background-color: #fffbf2; /* Warm Cream */
   border: 1px solid rgba(11, 25, 44, 0.15);
   border-radius: 50px;
   color: #0b192c;
   
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for buttons */
-  font-size: 0.95rem; /* ~15px (Small 15-16px range) */
-  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  font-family: 'Inter', sans-serif; /* Inter for buttons */
+  font-size: 1.05rem; /* Increased font-size for better visibility */
+  font-weight: 600; /* Inter 600 (SemiBold) */
   cursor: pointer;
   box-shadow: 
     0 4px 12px rgba(11, 25, 44, 0.06),
@@ -241,9 +257,9 @@
 }
 
 .spacer-content h2 {
-  font-family: 'Outfit', sans-serif; /* Outfit for Massive Section Statements */
+  font-family: 'Inter', sans-serif; /* Inter for Massive Section Statements */
   font-size: 2.8rem; /* ~45px (Section Title 42-52px range) */
-  font-weight: 700; /* Outfit 700 (Bold) */
+  font-weight: 600; /* Inter 600 (SemiBold) */
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #1a1a1a;
@@ -272,10 +288,12 @@
 }
 
 @media (max-width: 768px) {
-  /* Allow container to grow with stacked content */
   .takeover-container {
     height: auto;
     min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
   .takeover-container .takeover-img {
     position: absolute;
@@ -363,12 +381,12 @@
 /* Floating Backdrop Cloud Layer */
 .floating-cloud {
   position: absolute;
-  top: 54%;
-  left: -5%;
-  width: 55vw;
+  top: 66%; /* Shifted down to sit directly behind and below subtext */
+  left: -5%; /* Shifted further left */
+  width: 55vw; /* Restored to 55vw for wider backdrop */
   max-width: 700px;
   height: auto;
-  opacity: 0.7;
+  opacity: 0.88; /* Whiter and more opaque to frame black text clearly */
   z-index: 5;
   pointer-events: none;
   mix-blend-mode: normal;
@@ -380,9 +398,9 @@
     transform: translateY(-50%) translate(0, 0) rotate(0deg) scale(1);
   }
   50% {
-    transform: translateY(-50%) translate(70px, -30px) rotate(1.5deg) scale(1.05);
+    transform: translateY(-50%) translate(20px, -20px) rotate(1deg) scale(1.02); /* Kept translation minor towards the right */
   }
   100% {
-    transform: translateY(-50%) translate(-30px, 20px) rotate(-1.5deg) scale(0.96);
+    transform: translateY(-50%) translate(-60px, 20px) rotate(-1deg) scale(0.97); /* Flow more towards the left margin */
   }
 }

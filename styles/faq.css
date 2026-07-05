@@ -3,14 +3,17 @@
    ============================================================= */
 .faq-section {
   position: relative;
-  min-height: 80vh;
-  width: 100vw;
+  min-height: calc(80vh - 60px);
+  width: 96%;
+  max-width: 1400px;
+  margin: 30px auto;
+  border-radius: 24px;
   background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/14%20comprsd.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #0b192c; /* Deep slate charcoal text */
-  padding: 120px 8% 120px 8%;
+  padding: 100px 8% 100px 8%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,9 +52,9 @@
 }
 
 .faq-heading {
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for Section Headings */
+  font-family: 'Inter', sans-serif; /* Inter for Section Headings */
   font-size: 2.8rem; /* ~45px (Section Title 42-52px range) */
-  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  font-weight: 600; /* Inter 600 (SemiBold) */
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: #0b192c; /* Deep slate charcoal */
@@ -98,9 +101,9 @@
   padding: 12px 0;
   cursor: pointer;
   color: #0b192c; /* Deep slate charcoal */
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for Interactive headings */
+  font-family: 'Inter', sans-serif; /* Inter for Interactive headings */
   font-size: 1.15rem; /* ~18px (Card/Question Title range) */
-  font-weight: 500; /* Plus Jakarta 500 (Medium) */
+  font-weight: 500; /* Inter 500 (Medium) */
   gap: 20px;
   transition: color 0.3s ease;
 }
@@ -183,6 +186,9 @@
 
 @media (max-width: 768px) {
   .faq-section {
+    width: 96%;
+    margin: 16px auto;
+    border-radius: 16px;
     padding: 60px 5% 60px 5%;
     min-height: auto;
   }

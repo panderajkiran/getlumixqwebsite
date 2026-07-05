@@ -105,10 +105,10 @@
 
 .nav-link {
   text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for navigation */
+  font-family: 'Inter', sans-serif; /* Inter for navigation */
   font-size: 0.95rem; /* ~15px */
-  font-weight: 500; /* Plus Jakarta 500 (Medium) */
-  color: #b14c33; /* Premium dark orange/terracotta */
+  font-weight: 500; /* Inter 500 (Medium) */
+  color: #1a1a1a; /* Black menu links when transparent */
   padding: 8px 16px;
   border-radius: 20px;
   transition: all 0.3s ease;
@@ -119,8 +119,8 @@
 }
 
 .nav-link:hover {
-  color: #b14c33;
-  background-color: rgba(177, 76, 51, 0.08);
+  color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.06);
 }
 
 .navbar.scrolled .nav-link:hover {
@@ -129,7 +129,7 @@
 }
 
 .nav-link.active {
-  color: #b14c33;
+  color: #1a1a1a;
 }
 
 .navbar.scrolled .nav-link.active {
@@ -145,9 +145,9 @@
 
 .btn-signin {
   text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for buttons */
+  font-family: 'Inter', sans-serif; /* Inter for buttons */
   font-size: 0.9rem; /* ~15px */
-  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  font-weight: 600; /* Inter 600 (SemiBold) */
   color: #1a1a1a;
   padding: 10px 20px;
   border-radius: 30px;
@@ -165,9 +165,9 @@
 
 .btn-demo {
   text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif; /* Plus Jakarta Sans for buttons */
+  font-family: 'Inter', sans-serif; /* Inter for buttons */
   font-size: 0.9rem; /* ~15px */
-  font-weight: 600; /* Plus Jakarta 600 (SemiBold) */
+  font-weight: 600; /* Inter 600 (SemiBold) */
   color: #1a1a1a;
   padding: 10px 20px;
   border-radius: 30px;
