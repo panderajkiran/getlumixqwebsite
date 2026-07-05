@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="styles/navbar.css?v=11">
   <link rel="stylesheet" href="styles/hero.css?v=100">
   <link rel="stylesheet" href="styles/platform.css?v=30">
-  <link rel="stylesheet" href="styles/product.css?v=6">
+  <link rel="stylesheet" href="styles/product.css?v=23">
   <link rel="stylesheet" href="styles/faq.css?v=9">
 </head>
 
@@ -125,143 +125,109 @@
     </div>
   </section>
 
-  <!-- Section 2.3: Capabilities Section (Scroll Fade-In) -->
-  <section class="product-folders-section" id="product">
-    <div class="product-folders-container">
+  <!-- Section 2.3: Capabilities Section (Sticky Sidebar & Scroll Details) -->
+  <section class="product-capabilities-section" id="product">
+    <div class="capabilities-layout-container">
       
-      <!-- Folder 1: Compass -->
-      <div class="product-folder-card cap-compass">
-        <div class="folder-content">
-          <div class="folder-visual">
-            <div class="mockup-frame">
-              <div class="mockup-header">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="window-title">lumi6 Compass</span>
-              </div>
-              <div class="mockup-body mockup-compass-ui">
-                <div class="mockup-ui-element" style="top: 12%; left: 10%; width: 50%; height: 72%;">
-                  <div class="mockup-ui-title">Goal Alignment Roadmap</div>
-                  <div class="mockup-ui-bar long accent"></div>
-                  <div class="mockup-ui-bar medium"></div>
-                  <div class="mockup-ui-bar long"></div>
-                  <div class="mockup-ui-bar short"></div>
-                </div>
-                <div class="mockup-ui-element" style="top: 32%; right: 8%; width: 34%; background: #ffffff;">
-                  <div class="mockup-ui-title">Memory Engine</div>
-                  <div class="mockup-ui-bar short accent"></div>
-                  <div class="mockup-ui-bar long"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="folder-info">
-            <h2 class="folder-title">Compass</h2>
-            <p class="folder-description">A personalized AI partner that understands you, plans your journey, and guides every step of your growth.</p>
-          </div>
-        </div>
-      </div>
+      <!-- Left Column: Sticky Sidebar Menu -->
+      <aside class="capabilities-sidebar">
+        <ul class="sidebar-menu">
+          <li class="menu-item active" data-target="cap-compass">
+            <span class="bullet">•</span> Compass Agent
+          </li>
+          <li class="menu-item" data-target="cap-roleplay">
+            <span class="bullet">•</span> AI Roleplay
+          </li>
+          <li class="menu-item" data-target="cap-multi-persona">
+            <span class="bullet">•</span> Multi Persona Roleplay
+          </li>
+          <li class="menu-item" data-target="cap-future-skills">
+            <span class="bullet">•</span> Practice Future Skills
+          </li>
+          <li class="menu-item" data-target="cap-coach">
+            <span class="bullet">•</span> Coach
+          </li>
+          <li class="menu-item" data-target="cap-intelligence">
+            <span class="bullet">•</span> Intelligence
+          </li>
+        </ul>
+      </aside>
 
-      <!-- Folder 2: Practice -->
-      <div class="product-folder-card cap-practice">
-        <div class="folder-content">
-          <div class="folder-visual">
-            <div class="mockup-frame">
-              <div class="mockup-header">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="window-title">lumi6 Practice Arena</span>
-              </div>
-              <div class="mockup-body mockup-practice-ui">
-                <div class="mockup-ui-element" style="top: 10%; left: 8%; width: 56%; height: 78%;">
-                  <div class="mockup-ui-title">AI Simulation: Leadership</div>
-                  <div class="mockup-ui-bar medium accent"></div>
-                  <div style="margin: 12px 0; padding: 8px; background: rgba(0,0,0,0.03); border-radius: 8px;">
-                    <span style="font-size: 0.7rem; font-weight: 600; display: block; color: #d97706; margin-bottom: 2px;">AI Customer Persona</span>
-                    <span style="font-size: 0.65rem; color: #4b5563; line-height: 1.3; display: block;">"Why is there a delay in our custom delivery plan?"</span>
-                  </div>
-                  <div class="mockup-ui-bar long"></div>
-                </div>
-                <div class="mockup-ui-element" style="bottom: 12%; right: 6%; width: 30%; text-align: center; background: #0b192c; color: white;">
-                  <div style="font-size: 0.7rem; font-weight: 600; margin-bottom: 6px;">Voice Feed</div>
-                  <div style="display: flex; justify-content: center; gap: 4px; height: 16px; align-items: center;">
-                    <div style="width: 3px; height: 10px; background: white; border-radius: 2px;"></div>
-                    <div style="width: 3px; height: 16px; background: #d97706; border-radius: 2px;"></div>
-                    <div style="width: 3px; height: 8px; background: white; border-radius: 2px;"></div>
-                    <div style="width: 3px; height: 12px; background: white; border-radius: 2px;"></div>
-                  </div>
-                </div>
-              </div>
+      <!-- Right Column: Scroll Details -->
+      <div class="capabilities-content-scroller">
+        
+        <!-- Detail 1: Compass Agent -->
+        <div class="capability-detail-block" id="cap-compass">
+          <div class="detail-text-wrapper">
+            <h3 class="detail-title">Compass Agent</h3>
+            <p class="detail-description">A personalized AI partner that understands you, plans your journey, and guides every step of your growth.</p>
+            <div class="detail-graphic-wrapper">
+              <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/compass%20graphic%20comprsd.jpg" alt="Compass Graphic" class="compass-detail-graphic">
             </div>
           </div>
-          <div class="folder-info">
-            <h2 class="folder-title">AI Roleplay</h2>
-            <p class="folder-description">From conversations to complex decisions, practice the moments that matter most.</p>
+          <div class="detail-media-container">
+            <div class="detail-video-wrapper">
+              <video class="detail-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/compass%20agent%20video.mp4" loop muted autoplay playsinline></video>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Folder 3: Coach -->
-      <div class="product-folder-card cap-coach">
-        <div class="folder-content">
-          <div class="folder-visual">
-            <div class="mockup-frame">
-              <div class="mockup-header">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="window-title">lumi6 AI Coach</span>
-              </div>
-              <div class="mockup-body mockup-coach-ui">
-                <div class="mockup-ui-element" style="top: 15%; left: 10%; width: 46%; height: 72%;">
-                  <div class="mockup-ui-title">Performance Feedback</div>
-                  <div class="mockup-ui-bar long accent"></div>
-                  <div class="mockup-ui-bar medium"></div>
-                  <div class="mockup-ui-bar short"></div>
-                </div>
-                <div class="mockup-ui-element" style="top: 25%; right: 8%; width: 38%; background: #ffffff;">
-                  <div class="mockup-ui-title">AI Reflection</div>
-                  <div style="font-size: 0.65rem; color: #374151; line-height: 1.4; margin-bottom: 8px; font-family: 'Inter', sans-serif;">
-                    "Try structuring your answers with structural points first."
-                  </div>
-                  <div class="mockup-ui-bar medium accent"></div>
-                </div>
-              </div>
+        <!-- Detail 2: AI Roleplay -->
+        <div class="capability-detail-block" id="cap-roleplay">
+          <div class="detail-text-wrapper">
+            <h3 class="detail-title">AI Roleplay</h3>
+            <p class="detail-description">From conversations to complex decisions, practice the moments that matter most.</p>
+            <div class="detail-graphic-wrapper">
+              <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/Sales%20scenerio.jpg" alt="AI Roleplay Graphic" class="compass-detail-graphic">
             </div>
           </div>
-          <div class="folder-info">
-            <h2 class="folder-title">Coach</h2>
-            <p class="folder-description">Receive feedback, refine your skills, and improve with every iteration.</p>
+          <div class="detail-media-container">
+            <div class="detail-video-wrapper">
+              <video class="detail-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/ai%20roleplay.mp4" loop muted autoplay playsinline></video>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Folder 4: Intelligence -->
-      <div class="product-folder-card cap-intelligence">
-        <div class="folder-content">
-          <div class="folder-visual">
-            <div class="mockup-frame">
-              <div class="mockup-header">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="window-title">lumi6 Intelligence</span>
-              </div>
-              <div class="mockup-body mockup-intelligence-ui">
-                <div class="mockup-ui-element" style="top: 12%; left: 8%; width: 84%; height: 78%;">
-                  <div class="mockup-ui-title">Organization Skill Radar</div>
-                  <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 70px; margin-top: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">
-                    <div style="width: 16%; height: 35%; background: #e5e7eb; border-radius: 4px;"></div>
-                    <div style="width: 16%; height: 70%; background: #d97706; border-radius: 4px;"></div>
-                    <div style="width: 16%; height: 50%; background: #e5e7eb; border-radius: 4px;"></div>
-                    <div style="width: 16%; height: 90%; background: #0b192c; border-radius: 4px;"></div>
-                  </div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.6rem; color: #9ca3af; margin-top: 6px; font-family: 'Inter', sans-serif; font-weight: 500;">
-                    <span>Goal</span><span>Practice</span><span>Coach</span><span>Growth</span>
-                  </div>
-                </div>
-              </div>
+        <!-- Detail 3: Multi Persona Roleplay -->
+        <div class="capability-detail-block" id="cap-multi-persona">
+          <div class="detail-text-wrapper">
+            <h3 class="detail-title">Multi Persona Roleplay</h3>
+            <p class="detail-description">Engage in complex, multi-layered simulations with diverse interactive AI personas to prepare for real-world complexity.</p>
+            <div class="detail-graphic-wrapper">
+              <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/Workplace%20scernios.jpg" alt="Multi Persona Graphic" class="compass-detail-graphic">
             </div>
           </div>
-          <div class="folder-info">
-            <h2 class="folder-title">Intelligence</h2>
-            <p class="folder-description">Measure, understand, and grow capability across your organization.</p>
+          <div class="detail-media-container">
+            <div class="detail-video-wrapper">
+              <video class="detail-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/multi%20persona%20roleplay.mp4" loop muted autoplay playsinline></video>
+            </div>
           </div>
         </div>
+
+        <!-- Detail 4: Practice Future Skills -->
+        <div class="capability-detail-block" id="cap-future-skills">
+          <div class="detail-text-wrapper">
+            <h3 class="detail-title">Practice Future Skills</h3>
+            <p class="detail-description">Master upcoming workplace capabilities and leadership competencies through guided interactive scenarios.</p>
+          </div>
+        </div>
+
+        <!-- Detail 5: Coach -->
+        <div class="capability-detail-block" id="cap-coach">
+          <div class="detail-text-wrapper">
+            <h3 class="detail-title">Coach</h3>
+            <p class="detail-description">Receive feedback, refine your skills, and improve with every iteration.</p>
+          </div>
+        </div>
+
+        <!-- Detail 6: Intelligence -->
+        <div class="capability-detail-block" id="cap-intelligence">
+          <div class="detail-text-wrapper">
+            <h3 class="detail-title">Intelligence</h3>
+            <p class="detail-description">Measure, understand, and grow capability across your organization.</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -427,7 +393,6 @@
     </div>
   </section>
 
-  <script type="module" src="js/main.js?v=17"></script>
+  <script type="module" src="js/main.js?v=19"></script>
 </body>
-
 </html>

@@ -1,315 +1,406 @@
 /* -------------------------------------------------------------
-   PRODUCT CAPABILITIES — SCROLL FADE-IN LAYOUT
+   PRODUCT CAPABILITIES — STICKY SIDEBAR LAYOUT
 ------------------------------------------------------------- */
-.product-folders-section {
+.product-capabilities-section {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  margin: 80px 0;
-  background-color: transparent;
+  margin: 120px 0;
+  background-color: transparent; /* No white background card */
   z-index: 10;
   box-sizing: border-box;
 }
 
-.product-folders-container {
-  display: block;
-  width: 100%;
-}
 
-/* Individual Capability Card */
-.product-folder-card {
-  position: relative;
-  width: 100vw;
-  min-height: 520px;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border-radius: 0;
-  box-shadow: 0 15px 50px rgba(11, 25, 44, 0.06);
-  border-top: 1px solid rgba(11, 25, 44, 0.08);
-  border-bottom: 1px solid rgba(11, 25, 44, 0.08);
-  border-left: none;
-  border-right: none;
-  margin-bottom: 0; /* No stacking gap needed */
-
-  /* Initial hidden state for scroll animation */
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Revealed state when card enters viewport */
-.product-folder-card.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Folder Tabs protruding from the top-left (with horizontal offsets) */
-.folder-tab {
-  display: none; /* Removed protruding folder tabs */
-  position: absolute;
-  top: -38px;
-  height: 38px;
-  padding: 0 24px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+.capabilities-layout-container {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(11, 25, 44, 0.06);
-  border-left: 1px solid rgba(11, 25, 44, 0.06);
-  border-right: 1px solid rgba(11, 25, 44, 0.06);
-  box-sizing: border-box;
-  z-index: 10;
-}
-
-.folder-tab span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  font-size: 0.75rem;
-}
-
-/* Horizontal offsets for tabs so they remain visible when cards stack */
-.cap-compass .folder-tab {
-  left: 40px;
-  background-color: #0284c7; /* Slate Blue */
-  color: #ffffff;
-}
-
-.cap-practice .folder-tab {
-  left: 190px;
-  background-color: #16a34a; /* Sage Green */
-  color: #ffffff;
-}
-
-.cap-coach .folder-tab {
-  left: 340px;
-  background-color: #ea580c; /* Terracotta Peach */
-  color: #ffffff;
-}
-
-.cap-intelligence .folder-tab {
-  left: 490px;
-  background-color: #4f46e5; /* Lavender Indigo */
-  color: #ffffff;
-}
-
-/* Folder Internal Layout */
-.folder-content {
-  display: flex;
-  flex-direction: row-reverse; /* Put copy text on the left, visual mockup on the right */
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 50px;
-  gap: 50px;
-  box-sizing: border-box;
+  align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
+  padding: 0 80px 0 60px; /* Left padding set to 60px (~1.5 cm) from the left wall */
+  gap: 80px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5; /* Sit on top of background overlay */
 }
 
-/* Left-aligned Mockups inside Folder */
-.folder-visual {
-  width: 55%;
+/* Left Sidebar (Sticky Menu) */
+.capabilities-sidebar {
+  position: sticky;
+  top: 160px; /* Aligned beneath the navbar */
+  height: fit-content;
   flex-shrink: 0;
+  width: 260px; /* Restored sidebar width */
+  z-index: 12;
 }
 
-/* Right-aligned text stack */
-.folder-info {
-  width: 40%;
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
+  gap: 16px; /* Tight vertical spacing */
 }
 
-.folder-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 2.8rem;
+.menu-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem; /* Restored font size */
+  font-weight: 500;
+  color: rgba(11, 25, 44, 0.4); /* Lighter state when inactive */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 20px; /* Reserved space for bullet on the left */
+  transition: color 0.25s ease;
+}
+
+.menu-item:hover {
+  color: rgba(11, 25, 44, 0.7);
+}
+
+.menu-item .bullet {
+  font-size: 1.1rem;
+  opacity: 0;
+  color: #0b192c; /* Matches active text color */
+  position: absolute;
+  left: 0; /* Bullet sits in the left margin spacing */
+  transition: opacity 0.2s ease;
+}
+
+.menu-item.active {
+  color: #0b192c; /* Highlighted dark bold text when active */
+  font-weight: 600; /* Inter 600 */
+}
+
+.menu-item.active .bullet {
+  opacity: 1;
+}
+
+/* Right Content Scroller */
+.capabilities-content-scroller {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Full-screen sections stack continuously */
+  padding-bottom: 10vh;
+}
+
+/* Capability block styling */
+.capability-detail-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh; /* Reduced from 100vh to tighten vertical spacing between options */
+  padding: 60px 0; /* Add vertical separation padding */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; /* Clips overlay to card bounds */
+}
+
+.detail-text-wrapper {
+  width: 35%; /* Text and graphic column occupies 35% space */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Tighter spacing */
+  position: relative;
+  z-index: 5; /* Render above background overlay */
+}
+
+.detail-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem; /* Restored large size */
   font-weight: 700;
   color: #0b192c;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.25;
 }
 
-.folder-description {
+.detail-description {
   font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #1e293b;
+  color: #4b5563;
   margin: 0;
 }
 
-/* Folder Description Tags */
-.folder-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.folder-tag {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #3b4252;
-  background-color: #fffbf2; /* Warm cream pills */
-  border: 1px solid rgba(11, 25, 44, 0.08);
-  padding: 6px 14px;
-  border-radius: 50px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-}
-
-/* Info Alert Pill */
-.cap-info-badge {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 12px 16px;
-  background-color: rgba(217, 119, 6, 0.06);
-  border: 1px solid rgba(217, 119, 6, 0.15);
+/* Media placeholder area for videos/screenshots later */
+.detail-media-placeholder {
+  width: 45%;
+  height: 280px;
+  background-color: transparent;
+  border: 1px dashed rgba(11, 25, 44, 0.15); /* Dotted border frame */
   border-radius: 12px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  color: #b45309;
-  line-height: 1.45;
   box-sizing: border-box;
-}
-
-.cap-info-badge svg {
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  margin-top: 1px;
-}
-
-/* High-fidelity Mockup Browser Shells */
-.mockup-frame {
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(11, 25, 44, 0.12);
-  border: 1px solid rgba(11, 25, 44, 0.06);
-}
-
-.mockup-header {
-  height: 40px;
-  background-color: #f3f4f6;
-  border-bottom: 1px solid rgba(11, 25, 44, 0.05);
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  gap: 6px;
-}
-
-.mockup-header .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #e5e7eb;
-}
-
-.mockup-header .dot:nth-child(1) { background-color: #f87171; }
-.mockup-header .dot:nth-child(2) { background-color: #fbbf24; }
-.mockup-header .dot:nth-child(3) { background-color: #34d399; }
-
-.window-title {
-  margin-left: 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  color: #9ca3af;
-  font-weight: 500;
-}
-
-.mockup-body {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  background-color: #fffbf2;
-  box-sizing: border-box;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Mockup inner components */
-.mockup-compass-ui { background: linear-gradient(135deg, #eef2f3 0%, #ffeef8 100%); }
-.mockup-practice-ui { background: linear-gradient(135deg, #e8f5e9 0%, #e0f2f1 100%); }
-.mockup-coach-ui { background: linear-gradient(135deg, #efebe9 0%, #fbe9e7 100%); }
-.mockup-intelligence-ui { background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%); }
-
-.mockup-ui-element {
-  position: absolute;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 16px;
-  box-sizing: border-box;
-}
-
-.mockup-ui-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: #0b192c;
-  margin-bottom: 8px;
-}
-
-.mockup-ui-bar {
-  height: 8px;
-  background-color: #e5e7eb;
-  border-radius: 4px;
-  margin-bottom: 6px;
-}
-
-.mockup-ui-bar.short { width: 40%; }
-.mockup-ui-bar.medium { width: 70%; }
-.mockup-ui-bar.long { width: 90%; }
-.mockup-ui-bar.accent { background-color: #d97706; }
-
-/* Responsive layout adjustments */
+/* Responsive adjustments */
 @media (max-width: 991px) {
-  .folder-content {
-    flex-direction: column;
-    padding: 40px 24px;
-    gap: 30px;
+  .capabilities-layout-container {
+    gap: 40px;
+    padding: 0 24px;
   }
-  .folder-visual {
-    width: 100%;
+  .capabilities-sidebar {
+    width: 220px;
   }
-  .folder-info {
-    width: 100%;
+  .detail-title {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .product-folders-section {
+  .product-capabilities-section {
+    margin: 60px 0;
+  }
+  .capabilities-layout-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .capabilities-sidebar {
+    position: sticky;
+    top: 80px; /* Sticky below main mobile navbar */
     width: 100%;
-    margin: 30px 0;
+    z-index: 100;
+    background-color: #F9F7F2; /* Cream background to block items behind */
+    border-bottom: 1px solid rgba(11, 25, 44, 0.08);
+    padding: 12px 24px;
+    margin: 0 -24px; /* Pull flush to screen edges */
+    box-sizing: content-box;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbars */
   }
-  .product-folder-card {
+  .capabilities-sidebar::-webkit-scrollbar {
+    display: none; /* Hide scrollbars for Chrome/Safari */
+  }
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 20px;
+    width: max-content;
+  }
+  .menu-item {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    padding-left: 14px;
+  }
+  .detail-title {
+    font-size: 1.5rem; /* Compact size for mobile browser screen size friction */
+  }
+  .capabilities-content-scroller {
+    gap: 8vh;
+    padding-bottom: 10vh;
+  }
+  .capability-detail-block {
+    flex-direction: column;
+    align-items: flex-start;
     min-height: auto;
+    gap: 24px;
   }
-  .product-folders-container {
-    padding-top: 20px;
+  .detail-text-wrapper,
+  .detail-media-placeholder,
+  .detail-media-container {
+    width: 100%;
+  }
+  .detail-media-placeholder {
+    height: 220px;
   }
 }
+
+/* -------------------------------------------------------------
+   CAPABILITY DETAIL MEDIA & GRAPHICS STYLE
+------------------------------------------------------------- */
+.detail-media-container {
+  width: 60%; /* Video column occupies 60% space (exceptionally large) */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5; /* Render above background overlay */
+}
+
+.detail-video-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(11, 25, 44, 0.08);
+  border: 1px solid rgba(11, 25, 44, 0.06);
+  background-color: #0b192c;
+  display: block;
+}
+
+.detail-video {
+  width: 100%;
+  height: auto; /* Fit video natural height */
+  object-fit: contain; /* Show the full uncropped video */
+  display: block;
+}
+
+/* Revert Compass Agent video card to original 16:9 crop behavior */
+#cap-compass .detail-video-wrapper {
+  aspect-ratio: 16 / 9;
+}
+
+#cap-compass .detail-video {
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-content-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* Gap between text top and media bottom row */
+  box-sizing: border-box;
+}
+
+.detail-text-wrapper-full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-media-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 48px;
+}
+
+.detail-graphic-wrapper {
+  width: 100%; /* Takes up full column width */
+  max-width: 320px; /* Wider and clearer presentation */
+  flex-shrink: 0;
+  margin-top: 24px; /* Separation from text above */
+}
+
+.detail-video-container-large {
+  width: 60%; /* Video player takes up 60% space (restored to larger size) */
+  flex-grow: 1;
+}
+
+.compass-detail-graphic {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 25, 44, 0.08);
+  box-shadow: 0 8px 24px rgba(11, 25, 44, 0.04);
+  display: block;
+}
+
+/* Make sure mobile stacking works inside rows */
+@media (max-width: 768px) {
+  .detail-media-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .detail-graphic-wrapper,
+  .detail-video-container-large {
+    width: 100%;
+  }
+}
+
+/* 25% smaller video cards and tight side-by-side gap for AI Roleplay & Multi Persona cards */
+#cap-roleplay,
+#cap-multi-persona {
+  justify-content: flex-start;
+  align-items: flex-start; /* Both columns start from top — no vertical gap */
+  gap: 3%; /* Minimal horizontal space between graphic and video */
+  padding-top: 120px; /* Push content down so titles clear the navbar */
+}
+
+#cap-roleplay .detail-text-wrapper,
+#cap-multi-persona .detail-text-wrapper {
+  width: 47%; /* Balanced width */
+}
+
+#cap-roleplay .detail-media-container,
+#cap-multi-persona .detail-media-container {
+  width: 47%; /* 25% smaller than the large Compass Agent video container (60%) */
+}
+
+/* Elegant Gradient Graphic Cards */
+.gradient-graphic-card {
+  width: 100%;
+  aspect-ratio: 1.6;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(11, 25, 44, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+.practice-gradient {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+}
+
+.coach-gradient {
+  background: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
+}
+
+.intelligence-gradient {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.graphic-card-icon {
+  width: 56px;
+  height: 56px;
+  stroke: white;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+.graphic-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
