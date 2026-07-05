@@ -158,6 +158,25 @@ const initTransitionScroll = () => {
   handleScroll(); // Initial call
 };
 
+const initProductFadeIn = () => {
+  const cards = document.querySelectorAll('.product-folder-card');
+  if (!cards.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, {
+    threshold: 0.15, // Trigger when 15% of card is visible
+    rootMargin: '0px 0px -50px 0px' // Slight bottom offset for natural feel
+  });
+
+  cards.forEach(card => observer.observe(card));
+};
+
 // Initialize component interactions
 const initApp = () => {
   initNavbar();
@@ -166,6 +185,7 @@ const initApp = () => {
   initHeroReveal();
   initFAQ();
   initTransitionScroll();
+  initProductFadeIn();
   console.log('App initialized.');
 };
 

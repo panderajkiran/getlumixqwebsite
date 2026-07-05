@@ -378,7 +378,7 @@
 /* Floating Backdrop Cloud Layer */
 .floating-cloud {
   position: absolute;
-  top: 66%; /* Shifted down to sit directly behind and below subtext */
+  top: calc(66% + 20px); /* Shifted 0.5 cm (~20px) down from its current placement */
   left: -5%; /* Shifted further left */
   width: 55vw; /* Restored to 55vw for wider backdrop */
   max-width: 700px;
@@ -424,11 +424,19 @@
   text-align: left;
 }
 
+.transition-logo {
+  width: 32px; /* Smaller brand icon size */
+  height: 32px;
+  margin: 0 auto 24px auto; /* Centered horizontally, 24px gap below */
+  opacity: 0.65;
+  display: block;
+}
+
 .transition-text {
   font-family: 'Inter', sans-serif; /* Same font as Platform title */
-  font-size: 3.0rem; /* Big sized letters of our fonts */
+  font-size: 2.3rem; /* Reduced to a clean, proper reading size */
   font-weight: 600; /* Matching weight */
-  line-height: 1.4;
+  line-height: 1.55;
   color: rgba(11, 25, 44, 0.08); /* Initial light state */
   word-break: keep-all;
 }
@@ -446,6 +454,7 @@
 
 @media (max-width: 768px) {
   .transition-text {
-    font-size: 2.2rem;
+    font-size: 1.40rem; /* Significantly reduced for mobile browser layouts to prevent long scrolls */
+    line-height: 1.5;
   }
 }

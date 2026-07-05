@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------
-   PRODUCT CAPABILITIES STACKING FOLDERS LAYOUT
+   PRODUCT CAPABILITIES — SCROLL FADE-IN LAYOUT
 ------------------------------------------------------------- */
 .product-folders-section {
   position: relative;
@@ -12,28 +12,38 @@
 }
 
 .product-folders-container {
-  display: block; /* Direct block layout for reliable browser sticky stacking */
+  display: block;
   width: 100%;
-  padding-top: 0; /* Space for tabs removed */
 }
 
-/* Individual Stacking Folder Card */
+/* Individual Capability Card */
 .product-folder-card {
-  position: sticky;
-  top: 140px; /* Stacking threshold below the navbar */
+  position: relative;
   width: 100vw;
-  height: 580px; /* Uniform height for cards to stack cleanly */
+  min-height: 520px;
   box-sizing: border-box;
-  background-color: #ffffff; /* Uniform clean white background for all cards */
-  border-radius: 0; /* Curve removed to make it full screen flat */
+  background-color: #ffffff;
+  border-radius: 0;
   box-shadow: 0 15px 50px rgba(11, 25, 44, 0.06);
   border-top: 1px solid rgba(11, 25, 44, 0.08);
   border-bottom: 1px solid rgba(11, 25, 44, 0.08);
   border-left: none;
   border-right: none;
-  margin-bottom: 25vh; /* Large margin spacing to allow vertical stacking overlay scroll build-up */
+  margin-bottom: 0; /* No stacking gap needed */
+
+  /* Initial hidden state for scroll animation */
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Revealed state when card enters viewport */
+.product-folder-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 /* Folder Tabs protruding from the top-left (with horizontal offsets) */
@@ -277,9 +287,6 @@
 
 /* Responsive layout adjustments */
 @media (max-width: 991px) {
-  .product-folder-card {
-    height: auto;
-  }
   .folder-content {
     flex-direction: column;
     padding: 40px 24px;
@@ -291,23 +298,18 @@
   .folder-info {
     width: 100%;
   }
-  .folder-tab {
-    left: 20px !important; /* Reset horizontal offset on tablets */
-  }
 }
 
 @media (max-width: 768px) {
   .product-folders-section {
     width: 100%;
-    border-radius: 0;
     margin: 30px 0;
   }
   .product-folder-card {
-    position: relative;
-    top: 0;
-    margin-bottom: 40px;
+    min-height: auto;
   }
   .product-folders-container {
     padding-top: 20px;
   }
+}
 }
