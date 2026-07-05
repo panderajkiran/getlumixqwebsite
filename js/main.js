@@ -88,9 +88,19 @@ const initFAQ = () => {
   });
 };
 
+const initHeroVideo = () => {
+  const video = document.querySelector('.hero-video-element');
+  if (video && video.dataset.src) {
+    video.src = video.dataset.src;
+    video.load();
+    video.play().catch(err => console.log('Hero video play blocked/failed:', err));
+  }
+};
+
 // Initialize component interactions
 const initApp = () => {
   initNavbar();
+  initHeroVideo();
   initVideoLoader();
   initHeroReveal();
   initFAQ();

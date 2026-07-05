@@ -7,6 +7,9 @@
   <meta name="description" content="Lumi6 transforms goals into personalized learning journeys. Build workplace capability through continuous practice.">
   <title>Lumi6</title>
   <link rel="icon" type="image/webp" href="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Logo/favicon.webp">
+  
+  <!-- Preload Critical Hero Background Image -->
+  <link rel="preload" href="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/18%20comprsd.jpg" as="image">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,8 +75,8 @@
       <div class="hero-video-wrapper">
         <div class="video-card-container">
           <video class="hero-video-element"
-            src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/hero%20section%20video.mp4" autoplay loop
-            muted playsinline></video>
+            data-src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/hero%20section%20video.mp4" loop
+            muted playsinline preload="none"></video>
         </div>
         <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-glass-hero"
           style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
@@ -287,7 +290,7 @@
     </div>
   </section>
 
-  <script type="module" src="js/main.js?v=9"></script>
+  <script type="module" src="js/main.js?v=12"></script>
 </body>
 
 </html>
