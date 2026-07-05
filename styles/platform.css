@@ -3,23 +3,18 @@
 ============================================================= */
 .platform-section {
   position: relative;
-  min-height: calc(100vh - 60px);
-  width: 96%;
-  max-width: 1400px;
-  margin: 30px auto;
-  border-radius: 24px;
-  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/9%20comprsd.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fffbf2; /* Cream text */
-  padding: 120px 8% 80px 8%;
+  min-height: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  background-color: transparent; /* Transparent to inherit the warm cream background */
+  color: #0b192c; /* Slate navy text color */
+  padding: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 60px;
-  overflow: hidden;
 }
 
 .platform-container {

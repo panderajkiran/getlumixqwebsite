@@ -18,10 +18,11 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css?v=4">
+  <link rel="stylesheet" href="styles/variables.css?v=5">
   <link rel="stylesheet" href="styles/navbar.css?v=11">
   <link rel="stylesheet" href="styles/hero.css?v=93">
-  <link rel="stylesheet" href="styles/platform.css?v=29">
+  <link rel="stylesheet" href="styles/platform.css?v=30">
+  <link rel="stylesheet" href="styles/product.css?v=2">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
       </a>
       <ul class="nav-menu">
         <li><a href="index.html#platform" class="nav-link">Platform</a></li>
-        <li><a href="product.html" class="nav-link active">Capabilities</a></li>
+        <li><a href="index.html#product" class="nav-link">Capabilities</a></li>
         <li><a href="#" class="nav-link">Use cases</a></li>
       </ul>
       <div class="nav-buttons">
@@ -47,10 +48,190 @@
     </div>
   </nav>
 
-  <!-- Section 2.2: New Preview Section (Main content) -->
-  <section class="new-section" id="preview-section" style="padding-top: 180px;">
-    <div class="new-section-container">
-      <!-- Content placeholder (to be updated later) -->
+  <!-- Section 2.2: Capabilities Section (Sticky Scroll Layout) -->
+  <section class="capabilities-section" id="capabilities" style="margin-top: 130px;">
+    <!-- Mesh Background image -->
+    <div class="capabilities-bg" style="background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/17%20comprsd.jpg');"></div>
+    
+    <div class="capabilities-container">
+      <!-- Left Column: Sticky Description stack -->
+      <div class="capabilities-text-column">
+        <div class="sticky-text-wrapper">
+          <span class="platform-tag">Product suite</span>
+          
+          <!-- Text Item 1: Compass -->
+          <div class="capability-text-item active" data-index="1">
+            <h2 class="cap-title">1. Compass</h2>
+            <p class="cap-subtitle">Your AI learning partner. This is where everything starts.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">Goal understanding</span>
+              <span class="cap-tag">Company context</span>
+              <span class="cap-tag">Personal context</span>
+              <span class="cap-tag">Memory</span>
+              <span class="cap-tag">Personalized learning plans</span>
+              <span class="cap-tag">Adaptive recommendations</span>
+            </div>
+          </div>
+
+          <!-- Text Item 2: Practice -->
+          <div class="capability-text-item" data-index="2">
+            <h2 class="cap-title">2. Practice</h2>
+            <p class="cap-subtitle">Learn by doing. Everything related to actually building capability.</p>
+            <div class="cap-info-badge">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 9V14M12 17.01L12.01 16.998M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Critical Thinking isn't a separate feature. It's simply one type of practice.</span>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">AI Roleplays</span>
+              <span class="cap-tag">Multi-persona simulations</span>
+              <span class="cap-tag">Voice</span>
+              <span class="cap-tag">Text</span>
+              <span class="cap-tag">Guided practice</span>
+              <span class="cap-tag">Critical Thinking exercises</span>
+              <span class="cap-tag">Problem Solving simulations</span>
+              <span class="cap-tag">Decision-making scenarios</span>
+              <span class="cap-tag">Leadership conversations</span>
+            </div>
+          </div>
+
+          <!-- Text Item 3: Coach -->
+          <div class="capability-text-item" data-index="3">
+            <h2 class="cap-title">3. Coach</h2>
+            <p class="cap-subtitle">Feedback that helps you improve.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">AI Coach</span>
+              <span class="cap-tag">Reflection</span>
+              <span class="cap-tag">Insights</span>
+              <span class="cap-tag">Iterative practice</span>
+              <span class="cap-tag">Next recommendations</span>
+              <span class="cap-tag">Learning progress</span>
+            </div>
+          </div>
+
+          <!-- Text Item 4: Intelligence -->
+          <div class="capability-text-item" data-index="4">
+            <h2 class="cap-title">4. Intelligence</h2>
+            <p class="cap-subtitle">Measure capability across your organization.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">Capability Reports</span>
+              <span class="cap-tag">Team Analytics</span>
+              <span class="cap-tag">Growth Tracking</span>
+              <span class="cap-tag">Skill Signals</span>
+              <span class="cap-tag">Manager Dashboard</span>
+              <span class="cap-tag">Organizational Insights</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Scrolling Visual Mockup Cards -->
+      <div class="capabilities-cards-column">
+        <!-- Card 1: Compass Mockup -->
+        <div class="capability-visual-card active" data-index="1">
+          <div class="mockup-frame">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-title">lumi6 Compass</span>
+            </div>
+            <div class="mockup-body mockup-compass-ui">
+              <div class="mockup-ui-element" style="top: 12%; left: 10%; width: 50%; height: 72%;">
+                <div class="mockup-ui-title">Goal Alignment Roadmap</div>
+                <div class="mockup-ui-bar long accent"></div>
+                <div class="mockup-ui-bar medium"></div>
+                <div class="mockup-ui-bar long"></div>
+                <div class="mockup-ui-bar short"></div>
+              </div>
+              <div class="mockup-ui-element" style="top: 32%; right: 8%; width: 34%; background: #ffffff;">
+                <div class="mockup-ui-title">Memory Engine</div>
+                <div class="mockup-ui-bar short accent"></div>
+                <div class="mockup-ui-bar long"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Practice Mockup -->
+        <div class="capability-visual-card" data-index="2">
+          <div class="mockup-frame">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-title">lumi6 Practice Arena</span>
+            </div>
+            <div class="mockup-body mockup-practice-ui">
+              <div class="mockup-ui-element" style="top: 10%; left: 8%; width: 56%; height: 78%;">
+                <div class="mockup-ui-title">AI Simulation: Leadership</div>
+                <div class="mockup-ui-bar medium accent"></div>
+                <div style="margin: 12px 0; padding: 8px; background: rgba(0,0,0,0.03); border-radius: 8px;">
+                  <span style="font-size: 0.7rem; font-weight: 600; display: block; color: #d97706; margin-bottom: 2px;">AI Customer Persona</span>
+                  <span style="font-size: 0.65rem; color: #4b5563; line-height: 1.3; display: block;">"Why is there a delay in our custom delivery plan?"</span>
+                </div>
+                <div class="mockup-ui-bar long"></div>
+              </div>
+              <div class="mockup-ui-element" style="bottom: 12%; right: 6%; width: 30%; text-align: center; background: #0b192c; color: white;">
+                <div style="font-size: 0.7rem; font-weight: 600; margin-bottom: 6px;">Voice Feed</div>
+                <div style="display: flex; justify-content: center; gap: 4px; height: 16px; align-items: center;">
+                  <div style="width: 3px; height: 10px; background: white; border-radius: 2px;"></div>
+                  <div style="width: 3px; height: 16px; background: #d97706; border-radius: 2px;"></div>
+                  <div style="width: 3px; height: 8px; background: white; border-radius: 2px;"></div>
+                  <div style="width: 3px; height: 12px; background: white; border-radius: 2px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Coach Mockup -->
+        <div class="capability-visual-card" data-index="3">
+          <div class="mockup-frame">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-title">lumi6 AI Coach</span>
+            </div>
+            <div class="mockup-body mockup-coach-ui">
+              <div class="mockup-ui-element" style="top: 15%; left: 10%; width: 46%; height: 72%;">
+                <div class="mockup-ui-title">Performance Feedback</div>
+                <div class="mockup-ui-bar long accent"></div>
+                <div class="mockup-ui-bar medium"></div>
+                <div class="mockup-ui-bar short"></div>
+              </div>
+              <div class="mockup-ui-element" style="top: 25%; right: 8%; width: 38%; background: #ffffff;">
+                <div class="mockup-ui-title">AI Reflection</div>
+                <div style="font-size: 0.65rem; color: #374151; line-height: 1.4; margin-bottom: 8px; font-family: 'Inter', sans-serif;">
+                  "Try structuring your answers with structural points first."
+                </div>
+                <div class="mockup-ui-bar medium accent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Intelligence Mockup -->
+        <div class="capability-visual-card" data-index="4">
+          <div class="mockup-frame">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-title">lumi6 Intelligence</span>
+            </div>
+            <div class="mockup-body mockup-intelligence-ui">
+              <div class="mockup-ui-element" style="top: 12%; left: 8%; width: 84%; height: 78%;">
+                <div class="mockup-ui-title">Organization Skill Radar</div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 70px; margin-top: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">
+                  <div style="width: 16%; height: 35%; background: #e5e7eb; border-radius: 4px;"></div>
+                  <div style="width: 16%; height: 70%; background: #d97706; border-radius: 4px;"></div>
+                  <div style="width: 16%; height: 50%; background: #e5e7eb; border-radius: 4px;"></div>
+                  <div style="width: 16%; height: 90%; background: #0b192c; border-radius: 4px;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.6rem; color: #9ca3af; margin-top: 6px; font-family: 'Inter', sans-serif; font-weight: 500;">
+                  <span>Goal</span><span>Practice</span><span>Coach</span><span>Growth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
