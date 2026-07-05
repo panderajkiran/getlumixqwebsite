@@ -111,6 +111,53 @@ const initHeroVideo = () => {
   }
 };
 
+const initTransitionScroll = () => {
+  const section = document.querySelector('.transition-section');
+  const text = document.querySelector('.transition-text');
+  if (!section || !text) return;
+
+  // Split text content into spans for typewriter reveal
+  const rawText = text.textContent.trim();
+  const words = rawText.split(/\s+/);
+  text.innerHTML = words.map(word => `<span class="reveal-word">${word}</span>`).join(' ');
+
+  const wordSpans = text.querySelectorAll('.reveal-word');
+  const totalWords = wordSpans.length;
+
+  const handleScroll = () => {
+    const rect = section.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    
+    // Calculate scroll progress through the transition section
+    // 0 when section top is at viewport bottom, 1 when section bottom is at viewport top
+    const startOffset = viewportHeight;
+    const endOffset = -rect.height;
+    const currentPos = rect.top;
+    
+    const range = startOffset - endOffset;
+    const progress = (startOffset - currentPos) / range;
+    
+    // Typewriter effect mapping progress from 0.15 to 0.55 (typing completes earlier to allow reading)
+    let activeThreshold = 0;
+    if (progress >= 0.15 && progress <= 0.55) {
+      activeThreshold = ((progress - 0.15) / 0.4) * totalWords;
+    } else if (progress > 0.55) {
+      activeThreshold = totalWords;
+    }
+
+    wordSpans.forEach((span, index) => {
+      if (index <= activeThreshold) {
+        span.classList.add('revealed');
+      } else {
+        span.classList.remove('revealed');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll(); // Initial call
+};
+
 // Initialize component interactions
 const initApp = () => {
   initNavbar();
@@ -118,6 +165,7 @@ const initApp = () => {
   initVideoLoader();
   initHeroReveal();
   initFAQ();
+  initTransitionScroll();
   console.log('App initialized.');
 };
 

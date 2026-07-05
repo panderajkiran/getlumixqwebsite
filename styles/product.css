@@ -3,9 +3,9 @@
 ------------------------------------------------------------- */
 .product-folders-section {
   position: relative;
-  width: 96%;
-  max-width: 1400px;
-  margin: 80px auto;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 80px 0;
   background-color: transparent;
   z-index: 10;
   box-sizing: border-box;
@@ -14,20 +14,23 @@
 .product-folders-container {
   display: block; /* Direct block layout for reliable browser sticky stacking */
   width: 100%;
-  padding-top: 50px; /* Space for protruding folder tabs */
+  padding-top: 0; /* Space for tabs removed */
 }
 
 /* Individual Stacking Folder Card */
 .product-folder-card {
   position: sticky;
   top: 140px; /* Stacking threshold below the navbar */
-  width: 100%;
+  width: 100vw;
   height: 580px; /* Uniform height for cards to stack cleanly */
   box-sizing: border-box;
   background-color: #ffffff; /* Uniform clean white background for all cards */
-  border-radius: 24px;
+  border-radius: 0; /* Curve removed to make it full screen flat */
   box-shadow: 0 15px 50px rgba(11, 25, 44, 0.06);
-  border: 1px solid rgba(11, 25, 44, 0.08);
+  border-top: 1px solid rgba(11, 25, 44, 0.08);
+  border-bottom: 1px solid rgba(11, 25, 44, 0.08);
+  border-left: none;
+  border-right: none;
   margin-bottom: 25vh; /* Large margin spacing to allow vertical stacking overlay scroll build-up */
 }
 
@@ -35,6 +38,7 @@
 
 /* Folder Tabs protruding from the top-left (with horizontal offsets) */
 .folder-tab {
+  display: none; /* Removed protruding folder tabs */
   position: absolute;
   top: -38px;
   height: 38px;
@@ -94,12 +98,15 @@
 /* Folder Internal Layout */
 .folder-content {
   display: flex;
+  flex-direction: row-reverse; /* Put copy text on the left, visual mockup on the right */
   align-items: center;
   justify-content: space-between;
   padding: 50px;
   gap: 50px;
   box-sizing: border-box;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   height: 100%;
 }
 
