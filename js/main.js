@@ -17,14 +17,28 @@ const initVideoLoader = () => {
     container.classList.add('video-playing');
   });
 
-  // Use IntersectionObserver to load and play when scrolled into view
+  // Preload video asynchronously in the background after page loads to avoid render-blocking
+  const startPreload = () => {
+    if (!video.src && video.dataset.src) {
+      video.src = video.dataset.src;
+      video.load();
+    }
+  };
+
+  if (document.readyState === 'complete') {
+    setTimeout(startPreload, 2200); // Trigger preload 2.2 seconds after complete
+  } else {
+    window.addEventListener('load', () => {
+      setTimeout(startPreload, 2200); // Trigger preload 2.2 seconds after window load event
+    });
+  }
+
+  // Use IntersectionObserver to play/pause (conserving CPU)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Load the src if not already loaded
-        if (!video.src && video.dataset.src) {
-          video.src = video.dataset.src;
-          video.load();
+        if (!video.src) {
+          startPreload();
         }
         video.play().catch(err => console.log('Video play interrupted:', err));
       } else {
