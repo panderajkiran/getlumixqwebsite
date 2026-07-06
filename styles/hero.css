@@ -176,7 +176,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px; /* Increased gap */
-  text-decoration: none !important; /* Force remove underline */
+  text-decoration: none !important; /* Moved from inline style, forced with important to remove any underline */
   
   padding: 16px 36px; /* Increased padding to make button bigger */
   background-color: #fffbf2; /* Warm Cream */
@@ -197,10 +197,6 @@
     background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.btn-glass-hero span {
-  text-decoration: none !important;
 }
 
 .btn-glass-hero .arrow-icon {

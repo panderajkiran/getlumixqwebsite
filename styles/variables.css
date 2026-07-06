@@ -17,6 +17,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* -------------------------------------------------------------
    ACCESSIBILITY: Focus & Motion
 ------------------------------------------------------------- */

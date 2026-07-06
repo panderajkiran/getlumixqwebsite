@@ -263,26 +263,21 @@ const initScrollToTop = () => {
   handleScroll();
 };
 
-// Lazy-load and play/pause capability detail videos on visibility
-const initDetailVideoLazyLoad = () => {
-  const videos = document.querySelectorAll('.detail-video[data-src]');
+// Play/pause capability detail videos on visibility to conserve CPU
+const initDetailVideoPlayControl = () => {
+  const videos = document.querySelectorAll('.detail-video');
   if (!videos.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const video = entry.target;
       if (entry.isIntersecting) {
-        // Lazy-load src on first visibility
-        if (!video.src && video.dataset.src) {
-          video.src = video.dataset.src;
-          video.load();
-        }
         video.play().catch(() => {});
       } else {
-        if (video.src) video.pause();
+        video.pause();
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
   videos.forEach(video => observer.observe(video));
 };
@@ -298,7 +293,7 @@ const initApp = () => {
   initCapabilitiesSidebarObserver();
   initNavbarActiveTracking();
   initScrollToTop();
-  initDetailVideoLazyLoad();
+  initDetailVideoPlayControl();
   console.log('App initialized.');
 };
 

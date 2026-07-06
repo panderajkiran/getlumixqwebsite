@@ -4,11 +4,12 @@
 .site-footer {
   position: relative;
   width: 100%;
-  background-color: #0b192c;
-  color: rgba(255, 251, 242, 0.85);
+  background-color: #F9F7F2;
+  color: #0b192c;
   padding: 80px 8% 40px 8%;
   box-sizing: border-box;
   z-index: 10;
+  border-top: 1px solid rgba(11, 25, 44, 0.08);
 }
 
 .footer-container {
@@ -18,7 +19,7 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 60px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255, 251, 242, 0.1);
+  border-bottom: 1px solid rgba(11, 25, 44, 0.08);
 }
 
 /* Brand Column */
@@ -38,14 +39,13 @@
   width: 28px;
   height: 28px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 .footer-logo-text {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
-  color: #fffbf2;
+  color: #0b192c;
   letter-spacing: -0.02em;
 }
 
@@ -54,7 +54,7 @@
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
-  color: rgba(255, 251, 242, 0.55);
+  color: rgba(11, 25, 44, 0.7);
   max-width: 280px;
 }
 
@@ -72,25 +72,25 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: rgba(255, 251, 242, 0.08);
-  border: 1px solid rgba(255, 251, 242, 0.1);
+  background-color: rgba(11, 25, 44, 0.04);
+  border: 1px solid rgba(11, 25, 44, 0.08);
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background-color: rgba(255, 251, 242, 0.15);
+  background-color: rgba(11, 25, 44, 0.08);
   transform: translateY(-2px);
 }
 
 .social-link svg {
   width: 16px;
   height: 16px;
-  fill: rgba(255, 251, 242, 0.7);
+  fill: rgba(11, 25, 44, 0.7);
   transition: fill 0.3s ease;
 }
 
 .social-link:hover svg {
-  fill: #fffbf2;
+  fill: #0b192c;
 }
 
 /* Footer Nav Columns */
@@ -106,7 +106,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 251, 242, 0.4);
+  color: rgba(11, 25, 44, 0.5);
   margin-bottom: 4px;
 }
 
@@ -114,13 +114,13 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
-  color: rgba(255, 251, 242, 0.7);
+  color: rgba(11, 25, 44, 0.7);
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .footer-col a:hover {
-  color: #fffbf2;
+  color: #0b192c;
 }
 
 /* Footer Bottom Bar */
@@ -138,7 +138,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  color: rgba(255, 251, 242, 0.35);
+  color: rgba(11, 25, 44, 0.5);
 }
 
 .footer-legal {
@@ -150,13 +150,13 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  color: rgba(255, 251, 242, 0.35);
+  color: rgba(11, 25, 44, 0.5);
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .footer-legal a:hover {
-  color: rgba(255, 251, 242, 0.7);
+  color: rgba(11, 25, 44, 0.8);
 }
 
 /* Responsive Footer */

@@ -252,14 +252,17 @@
   max-width: 1400px;
   margin: 30px auto;
   border-radius: 24px;
-  background-color: #F9F7F2; /* Clean cream background */
-  border: 1px solid rgba(11, 25, 44, 0.08); /* Subtle border around the card */
+  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/5%20comprsd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #0b192c; /* Deep slate charcoal text */
   padding: 100px 8%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-top: 1px solid rgba(11, 25, 44, 0.08);
 }
 
 .cta-container {
@@ -449,12 +452,15 @@
   max-width: 1400px;
   margin: 30px auto;
   border-radius: 24px;
-  background-color: #F9F7F2; /* Clean cream background */
-  border: 1px solid rgba(11, 25, 44, 0.08); /* Subtle border around the card */
+  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/17%20comprsd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-top: 1px solid rgba(11, 25, 44, 0.08);
 }
 
 .new-section-container {
