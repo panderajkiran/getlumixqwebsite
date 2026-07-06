@@ -174,7 +174,9 @@
   margin-top: 38px; /* Positioned 1 cm (~38px) below the current placement */
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px; /* Increased gap */
+  text-decoration: none !important; /* Force remove underline */
   
   padding: 16px 36px; /* Increased padding to make button bigger */
   background-color: #fffbf2; /* Warm Cream */
@@ -195,6 +197,10 @@
     background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-glass-hero span {
+  text-decoration: none !important;
 }
 
 .btn-glass-hero .arrow-icon {
@@ -291,6 +297,9 @@
     width: 100%;
     margin: 0;
     border-radius: 0;
+  }
+  .hero-left-bg {
+    width: 100vw; /* Full width on mobile instead of 50vw half-split */
   }
   .takeover-container .takeover-img {
     position: absolute;

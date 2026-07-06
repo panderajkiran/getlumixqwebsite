@@ -8,10 +8,8 @@
   max-width: 1400px;
   margin: 30px auto;
   border-radius: 24px;
-  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/14%20comprsd.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #F9F7F2; /* Clean cream background */
+  border: 1px solid rgba(11, 25, 44, 0.08); /* Subtle border around the card */
   color: #0b192c; /* Deep slate charcoal text */
   padding: 100px 8% 100px 8%;
   display: flex;
@@ -19,7 +17,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-top: 1px solid rgba(11, 25, 44, 0.08);
 }
 
 .faq-container {

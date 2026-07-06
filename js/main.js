@@ -207,6 +207,86 @@ const initCapabilitiesSidebarObserver = () => {
   });
 };
 
+// Auto-update navbar active link based on scroll position
+const initNavbarActiveTracking = () => {
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
+  if (!navLinks.length) return;
+
+  const sections = [];
+  navLinks.forEach(link => {
+    const sectionId = link.getAttribute('data-section');
+    const section = document.getElementById(sectionId);
+    if (section) sections.push({ link, section });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const activeId = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-section') === activeId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '-80px 0px -50% 0px' // Top offset for navbar height
+  });
+
+  sections.forEach(({ section }) => observer.observe(section));
+};
+
+// Scroll-to-top floating button
+const initScrollToTop = () => {
+  const btn = document.getElementById('scrollToTop');
+  if (!btn) return;
+
+  const heroHeight = window.innerHeight; // Show after scrolling past hero
+
+  const handleScroll = () => {
+    if (window.scrollY > heroHeight) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+};
+
+// Lazy-load and play/pause capability detail videos on visibility
+const initDetailVideoLazyLoad = () => {
+  const videos = document.querySelectorAll('.detail-video[data-src]');
+  if (!videos.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        // Lazy-load src on first visibility
+        if (!video.src && video.dataset.src) {
+          video.src = video.dataset.src;
+          video.load();
+        }
+        video.play().catch(() => {});
+      } else {
+        if (video.src) video.pause();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  videos.forEach(video => observer.observe(video));
+};
+
 // Initialize component interactions
 const initApp = () => {
   initNavbar();
@@ -216,6 +296,9 @@ const initApp = () => {
   initFAQ();
   initTransitionScroll();
   initCapabilitiesSidebarObserver();
+  initNavbarActiveTracking();
+  initScrollToTop();
+  initDetailVideoLazyLoad();
   console.log('App initialized.');
 };
 

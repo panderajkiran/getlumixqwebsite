@@ -102,6 +102,12 @@
   overflow: hidden; /* Clips overlay to card bounds */
 }
 
+/* Compact text-only capability blocks (no media) */
+.capability-detail-block.text-only-block {
+  min-height: auto;
+  padding: 40px 0;
+}
+
 .detail-text-wrapper {
   width: 35%; /* Text and graphic column occupies 35% space */
   display: flex;
@@ -129,17 +135,7 @@
   margin: 0;
 }
 
-/* Media placeholder area for videos/screenshots later */
-.detail-media-placeholder {
-  width: 45%;
-  height: 280px;
-  background-color: transparent;
-  border: 1px dashed rgba(11, 25, 44, 0.15); /* Dotted border frame */
-  border-radius: 12px;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
@@ -254,40 +250,12 @@
   object-fit: cover;
 }
 
-.detail-content-wrap {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px; /* Gap between text top and media bottom row */
-  box-sizing: border-box;
-}
-
-.detail-text-wrapper-full {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.detail-media-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 48px;
-}
 
 .detail-graphic-wrapper {
-  width: 100%; /* Takes up full column width */
-  max-width: 320px; /* Wider and clearer presentation */
+  width: 100%;
+  max-width: 320px;
   flex-shrink: 0;
-  margin-top: 24px; /* Separation from text above */
-}
-
-.detail-video-container-large {
-  width: 60%; /* Video player takes up 60% space (restored to larger size) */
-  flex-grow: 1;
+  margin-top: 24px;
 }
 
 .compass-detail-graphic {
@@ -299,14 +267,9 @@
   display: block;
 }
 
-/* Make sure mobile stacking works inside rows */
+/* Make sure mobile stacking works */
 @media (max-width: 768px) {
-  .detail-media-row {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .detail-graphic-wrapper,
-  .detail-video-container-large {
+  .detail-graphic-wrapper {
     width: 100%;
   }
 }
@@ -330,77 +293,4 @@
   width: 47%; /* 25% smaller than the large Compass Agent video container (60%) */
 }
 
-/* Elegant Gradient Graphic Cards */
-.gradient-graphic-card {
-  width: 100%;
-  aspect-ratio: 1.6;
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 20px 45px rgba(11, 25, 44, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
-.card-glow {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-  pointer-events: none;
-}
-
-.practice-gradient {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
-}
-
-.coach-gradient {
-  background: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
-}
-
-.intelligence-gradient {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-}
-
-.graphic-card-icon {
-  width: 56px;
-  height: 56px;
-  stroke: white;
-  margin-bottom: 20px;
-  opacity: 0.95;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
-  animation: floatIcon 4s ease-in-out infinite;
-}
-
-.graphic-card-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  padding: 0 20px;
-  z-index: 2;
-}
-
-.card-badge {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 30px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.02em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-@keyframes floatIcon {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}

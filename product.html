@@ -15,14 +15,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css?v=5">
-  <link rel="stylesheet" href="styles/navbar.css?v=11">
-  <link rel="stylesheet" href="styles/hero.css?v=100">
-  <link rel="stylesheet" href="styles/platform.css?v=30">
-  <link rel="stylesheet" href="styles/product.css?v=23">
+  <link rel="stylesheet" href="styles/variables.css?v=6">
+  <link rel="stylesheet" href="styles/navbar.css?v=12">
+  <link rel="stylesheet" href="styles/hero.css?v=101">
+  <link rel="stylesheet" href="styles/platform.css?v=31">
+  <link rel="stylesheet" href="styles/product.css?v=24">
+  <link rel="stylesheet" href="styles/footer.css?v=1">
 </head>
 
 <body>
@@ -37,21 +38,19 @@
         <span class="logo-text">lumi6</span>
       </a>
       <ul class="nav-menu">
-        <li><a href="index.html#platform" class="nav-link">Platform</a></li>
-        <li><a href="index.html#product" class="nav-link">Capabilities</a></li>
-        <li><a href="#" class="nav-link">Use cases</a></li>
+        <li><a href="index.html#platform" class="nav-link" data-section="platform">Platform</a></li>
+        <li><a href="index.html#product" class="nav-link" data-section="product">Capabilities</a></li>
+        <li><a href="index.html#faq" class="nav-link" data-section="faq">FAQ</a></li>
       </ul>
       <div class="nav-buttons">
-        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-signin">Sign In</a>
-        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-demo">Try Demo</a>
+        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-signin">Contact Us</a>
+        <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-demo">Book a Demo</a>
       </div>
     </div>
   </nav>
 
   <!-- Section 2.2: Capabilities Section (Sticky Scroll Layout) -->
   <section class="capabilities-section" id="capabilities" style="margin-top: 130px;">
-    <!-- Mesh Background image -->
-    <div class="capabilities-bg" style="background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/17%20comprsd.jpg');"></div>
     
     <div class="capabilities-container">
       <!-- Left Column: Sticky Description stack -->
@@ -235,7 +234,69 @@
     </div>
   </section>
 
-  <script type="module" src="js/main.js?v=19"></script>
-</body>
 
+  <!-- Scroll-to-Top Button -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img class="footer-logo-icon" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Logo/Logo%20favicon.svg" alt="Lumi6 Logo">
+          <span class="footer-logo-text">lumi6</span>
+        </div>
+        <p class="footer-tagline">Build workplace capability through continuous practice and personalized AI-guided learning.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product Column -->
+      <div class="footer-col">
+        <span class="footer-col-title">Product</span>
+        <a href="index.html#platform">Platform</a>
+        <a href="index.html#product">Capabilities</a>
+        <a href="https://tally.so/r/wM0JlY" target="_blank">Book a Demo</a>
+      </div>
+
+      <!-- Company Column -->
+      <div class="footer-col">
+        <span class="footer-col-title">Company</span>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="https://tally.so/r/wM0JlY" target="_blank">Contact</a>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-col">
+        <span class="footer-col-title">Resources</span>
+        <a href="index.html#faq">FAQ</a>
+        <a href="#">Blog</a>
+        <a href="#">Documentation</a>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2026 Lumi6. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js?v=20"></script>
+</body>
 </html>
