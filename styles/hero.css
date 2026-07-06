@@ -14,9 +14,9 @@
   position: absolute;
   top: 0; /* Fully touches the top corner */
   left: 0; /* Flush with left edge */
-  width: 50vw; /* Exactly 50% of screen width */
+  width: 100vw; /* Full width background overlay */
   height: 100%; /* Fully touches the bottom corner */
-  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/18%20comprsd.jpg');
+  background-image: url('https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/4%20comprsd.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -168,7 +168,11 @@
   max-width: 480px; /* Kept slightly narrower for premium editorial hierarchy */
 }
 
-/* Book A Demo CTA Button */
+.btn-glass-hero,
+.btn-glass-hero * {
+  text-decoration: none !important;
+}
+
 .btn-glass-hero {
   align-self: center; /* Center horizontally under the video card */
   margin-top: 38px; /* Positioned 1 cm (~38px) below the current placement */
@@ -176,7 +180,6 @@
   align-items: center;
   justify-content: center;
   gap: 12px; /* Increased gap */
-  text-decoration: none !important; /* Moved from inline style, forced with important to remove any underline */
   
   padding: 16px 36px; /* Increased padding to make button bigger */
   background-color: #fffbf2; /* Warm Cream */
