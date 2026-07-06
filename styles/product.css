@@ -87,10 +87,10 @@
   flex-shrink: 0;
 }
 
-.badge-green { background-color: #d1fae5; border: 1px solid #34d399; }
-.badge-purple { background-color: #f3e8ff; border: 1px solid #c084fc; }
-.badge-coral { background-color: #ffe4e6; border: 1px solid #f87171; }
-.badge-blue { background-color: #e0f2fe; border: 1px solid #38bdf8; }
+.badge-orange { background: linear-gradient(135deg, #ff9233 0%, #ff5e36 100%); }
+.badge-peach { background: linear-gradient(135deg, #ffb399 0%, #ff7e5f 100%); }
+.badge-blue-grad { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
+.badge-green-grad { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
 
 .card-grid-title {
   font-family: 'Inter', sans-serif;
@@ -131,107 +131,19 @@
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(11, 25, 44, 0.08);
   border: 1px solid rgba(11, 25, 44, 0.06);
-  background-color: #0b192c;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 
-.card-grid-video {
+.card-grid-video,
+.card-grid-graphic {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Custom interactive-looking chart/radar preview for Intelligence */
-.intelligence-mockup-container {
-  background-color: #ffffff;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.mockup-frame {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.mockup-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(11, 25, 44, 0.06);
-  margin-bottom: 16px;
-}
-
-.mockup-header .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: rgba(11, 25, 44, 0.15);
-}
-
-.mockup-header .window-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgba(11, 25, 44, 0.4);
-  margin-left: 6px;
-}
-
-.mockup-ui-element {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.mockup-ui-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #0b192c;
-  margin-bottom: 12px;
-}
-
-.chart-bars {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 90px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(11, 25, 44, 0.08);
-}
-
-.chart-bar {
-  width: 20%;
-  border-radius: 6px;
-  background-color: rgba(11, 25, 44, 0.06);
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.chart-bar.accent {
-  background-color: #d97706;
-}
-
-.chart-bar.dark {
-  background-color: #0b192c;
-}
-
-.chart-bar span {
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: rgba(11, 25, 44, 0.45);
-}
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
