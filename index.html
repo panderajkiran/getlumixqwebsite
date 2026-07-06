@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="styles/navbar.css?v=12">
   <link rel="stylesheet" href="styles/hero.css?v=102">
   <link rel="stylesheet" href="styles/platform.css?v=30">
-  <link rel="stylesheet" href="styles/product.css?v=24">
+  <link rel="stylesheet" href="styles/product.css?v=25">
   <link rel="stylesheet" href="styles/faq.css?v=9">
   <link rel="stylesheet" href="styles/footer.css?v=1">
 </head>
@@ -125,109 +125,95 @@
     </div>
   </section>
 
-  <!-- Section 2.3: Capabilities Section (Sticky Sidebar & Scroll Details) -->
+  <!-- Section 2.3: Capabilities Section (2x2 Grid Layout) -->
   <section class="product-capabilities-section" id="product">
-    <div class="capabilities-layout-container">
+    <div class="capabilities-header">
+      <span class="platform-tag">Capabilities</span>
+      <h2 class="platform-heading">Everything you need to build workplace capability</h2>
+    </div>
+
+    <div class="capabilities-grid-container">
       
-      <!-- Left Column: Sticky Sidebar Menu -->
-      <aside class="capabilities-sidebar">
-        <ul class="sidebar-menu">
-          <li class="menu-item active" data-target="cap-compass">
-            <span class="bullet">•</span> Compass Agent
-          </li>
-          <li class="menu-item" data-target="cap-roleplay">
-            <span class="bullet">•</span> AI Roleplay
-          </li>
-          <li class="menu-item" data-target="cap-multi-persona">
-            <span class="bullet">•</span> Multi Persona Roleplay
-          </li>
-          <li class="menu-item" data-target="cap-future-skills">
-            <span class="bullet">•</span> Practice Future Skills
-          </li>
-          <li class="menu-item" data-target="cap-coach">
-            <span class="bullet">•</span> Coach
-          </li>
-          <li class="menu-item" data-target="cap-intelligence">
-            <span class="bullet">•</span> Intelligence
-          </li>
-        </ul>
-      </aside>
-
-      <!-- Right Column: Scroll Details -->
-      <div class="capabilities-content-scroller">
-        
-        <!-- Detail 1: Compass Agent -->
-        <div class="capability-detail-block" id="cap-compass">
-          <div class="detail-text-wrapper">
-            <h3 class="detail-title">Compass Agent</h3>
-            <p class="detail-description">A personalized AI partner that understands you, plans your journey, and guides every step of your growth.</p>
-            <div class="detail-graphic-wrapper">
-              <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/compass%20graphic%20comprsd.jpg" alt="Compass Graphic" class="compass-detail-graphic">
-            </div>
+      <!-- Card 1: Compass Agent -->
+      <div class="capability-grid-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <span class="card-color-badge badge-green"></span>
+            <h3 class="card-grid-title">Compass Agent</h3>
           </div>
-          <div class="detail-media-container">
-            <div class="detail-video-wrapper">
-              <video class="detail-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/compass%20agent%20video.mp4" autoplay loop muted playsinline></video>
+          <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="card-grid-description">A personalized AI partner that understands you, plans your journey, and guides every step of your growth.</p>
+        <div class="card-grid-media">
+          <video class="card-grid-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/compass%20agent%20video.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+
+      <!-- Card 2: AI Roleplay and Coach -->
+      <div class="capability-grid-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <span class="card-color-badge badge-purple"></span>
+            <h3 class="card-grid-title">AI Roleplay & Coach</h3>
+          </div>
+          <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="card-grid-description">Engage in realistic, multi-layered simulations to practice critical conversations and receive instant actionable coaching feedback.</p>
+        <div class="card-grid-media">
+          <video class="card-grid-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/ai%20roleplay.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+
+      <!-- Card 3: Skill and Capabilities -->
+      <div class="capability-grid-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <span class="card-color-badge badge-coral"></span>
+            <h3 class="card-grid-title">Skill & Capabilities</h3>
+          </div>
+          <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="card-grid-description">Master future workplace capabilities, decision-making, and critical leadership competencies through guided simulations.</p>
+        <div class="card-grid-media">
+          <video class="card-grid-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/multi%20persona%20roleplay.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+
+      <!-- Card 4: Intelligence and Analytics -->
+      <div class="capability-grid-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <span class="card-color-badge badge-blue"></span>
+            <h3 class="card-grid-title">Intelligence & Analytics</h3>
+          </div>
+          <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="card-grid-description">Measure, analyze, and map organizational capabilities and growth patterns in real-time with comprehensive skill dashboards.</p>
+        <div class="card-grid-media intelligence-mockup-container">
+          <div class="mockup-frame">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-title">lumi6 Intelligence</span>
+            </div>
+            <div class="mockup-ui-element">
+              <div class="mockup-ui-title">Organization Skill Radar</div>
+              <div class="chart-bars">
+                <div class="chart-bar" style="height: 35%;"><span>Goal</span></div>
+                <div class="chart-bar accent" style="height: 70%;"><span>Practice</span></div>
+                <div class="chart-bar" style="height: 50%;"><span>Coach</span></div>
+                <div class="chart-bar dark" style="height: 90%;"><span>Growth</span></div>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Detail 2: AI Roleplay -->
-        <div class="capability-detail-block" id="cap-roleplay">
-          <div class="detail-text-wrapper">
-            <h3 class="detail-title">AI Roleplay</h3>
-            <p class="detail-description">From conversations to complex decisions, practice the moments that matter most.</p>
-            <div class="detail-graphic-wrapper">
-              <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/Sales%20scenerio.jpg" alt="AI Roleplay Graphic" class="compass-detail-graphic">
-            </div>
-          </div>
-          <div class="detail-media-container">
-            <div class="detail-video-wrapper">
-              <video class="detail-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/ai%20roleplay.mp4" autoplay loop muted playsinline></video>
-            </div>
-          </div>
-        </div>
-
-        <!-- Detail 3: Multi Persona Roleplay -->
-        <div class="capability-detail-block" id="cap-multi-persona">
-          <div class="detail-text-wrapper">
-            <h3 class="detail-title">Multi Persona Roleplay</h3>
-            <p class="detail-description">Engage in complex, multi-layered simulations with diverse interactive AI personas to prepare for real-world complexity.</p>
-            <div class="detail-graphic-wrapper">
-              <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/Workplace%20scernios.jpg" alt="Multi Persona Graphic" class="compass-detail-graphic">
-            </div>
-          </div>
-          <div class="detail-media-container">
-            <div class="detail-video-wrapper">
-              <video class="detail-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/multi%20persona%20roleplay.mp4" autoplay loop muted playsinline></video>
-            </div>
-          </div>
-        </div>
-
-        <!-- Detail 4: Practice Future Skills -->
-        <div class="capability-detail-block text-only-block" id="cap-future-skills">
-          <div class="detail-text-wrapper">
-            <h3 class="detail-title">Practice Future Skills</h3>
-            <p class="detail-description">Master upcoming workplace capabilities and leadership competencies through guided interactive scenarios.</p>
-          </div>
-        </div>
-
-        <!-- Detail 5: Coach -->
-        <div class="capability-detail-block text-only-block" id="cap-coach">
-          <div class="detail-text-wrapper">
-            <h3 class="detail-title">Coach</h3>
-            <p class="detail-description">Receive feedback, refine your skills, and improve with every iteration.</p>
-          </div>
-        </div>
-
-        <!-- Detail 6: Intelligence -->
-        <div class="capability-detail-block text-only-block" id="cap-intelligence">
-          <div class="detail-text-wrapper">
-            <h3 class="detail-title">Intelligence</h3>
-            <p class="detail-description">Measure, understand, and grow capability across your organization.</p>
-          </div>
-        </div>
-
       </div>
 
     </div>
@@ -455,6 +441,6 @@
     </div>
   </footer>
 
-  <script type="module" src="js/main.js?v=20"></script>
+  <script type="module" src="js/main.js?v=21"></script>
 </body>
 </html>

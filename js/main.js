@@ -158,54 +158,7 @@ const initTransitionScroll = () => {
   handleScroll(); // Initial call
 };
 
-const initCapabilitiesSidebarObserver = () => {
-  const menuItems = document.querySelectorAll('.capabilities-sidebar .menu-item');
-  const blocks = document.querySelectorAll('.capability-detail-block');
-  if (!menuItems.length || !blocks.length) return;
 
-  // Track scroll position to toggle active state in sidebar
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        menuItems.forEach(item => {
-          if (item.getAttribute('data-target') === id) {
-            item.classList.add('active');
-            // Smoothly center the active item inside horizontal scrolling container on mobile
-            item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-          } else {
-            item.classList.remove('active');
-          }
-        });
-      }
-    });
-  }, {
-    threshold: 0.35, // Trigger state change when 35% of the block is visible
-    rootMargin: '-10% 0px -40% 0px' // Offset viewport boundary to match human eyes
-  });
-
-  blocks.forEach(block => observer.observe(block));
-
-  // Add click support to scroll smoothly to blocks
-  menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const targetId = item.getAttribute('data-target');
-      const targetBlock = document.getElementById(targetId);
-      if (targetBlock) {
-        const offset = 140; // Spacing for sticky navbar
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetBlock.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-};
 
 // Auto-update navbar active link based on scroll position
 const initNavbarActiveTracking = () => {
@@ -265,7 +218,7 @@ const initScrollToTop = () => {
 
 // Play/pause capability detail videos on visibility to conserve CPU
 const initDetailVideoPlayControl = () => {
-  const videos = document.querySelectorAll('.detail-video');
+  const videos = document.querySelectorAll('.card-grid-video');
   if (!videos.length) return;
 
   const observer = new IntersectionObserver((entries) => {
@@ -290,7 +243,6 @@ const initApp = () => {
   initHeroReveal();
   initFAQ();
   initTransitionScroll();
-  initCapabilitiesSidebarObserver();
   initNavbarActiveTracking();
   initScrollToTop();
   initDetailVideoPlayControl();
