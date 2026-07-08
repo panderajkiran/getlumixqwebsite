@@ -87,8 +87,8 @@
   flex-shrink: 0;
 }
 
-.badge-orange { background: linear-gradient(135deg, #ff9233 0%, #ff5e36 100%); }
-.badge-peach { background: linear-gradient(135deg, #ffb399 0%, #ff7e5f 100%); }
+.badge-orange { background: linear-gradient(135deg, #ff7b00 0%, #ff3c00 100%); }
+.badge-peach { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
 .badge-blue-grad { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
 .badge-green-grad { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
 
