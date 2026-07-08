@@ -5,7 +5,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #F9F7F2; /* Cream foundation background color */
+  background-color: #ffffff; /* White foundation background color */
   z-index: 10;
   overflow: hidden; /* Prevent overflow on split background */
 }
@@ -232,7 +232,7 @@
 ------------------------------------------------------------- */
 .spacer-section {
   height: 100vh;
-  background-color: #fffbf2; /* Cream Canvas background */
+  background-color: #ffffff; /* White background */
   display: flex;
   align-items: center;
   justify-content: center;

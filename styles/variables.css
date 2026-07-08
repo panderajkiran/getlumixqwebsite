@@ -10,7 +10,7 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  background-color: #F9F7F2; /* Muted warm cream foundation background */
+  background-color: #ffffff; /* Plain white foundation background */
   overflow-x: clip; /* Fix for CSS position: sticky scroll stacking support */
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
