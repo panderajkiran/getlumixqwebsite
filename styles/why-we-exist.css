@@ -3,18 +3,17 @@
 ============================================================= */
 .exist-video-container {
   width: 100%;
-  height: 75vh;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background-color: #0b192c;
+  background-color: #ffffff;
   position: relative;
-  margin-top: 80px; /* Offset for navbar height */
+  margin-top: 100px; /* Shifted slightly down for better header spacing */
 }
 
 .exist-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 25%; /* Slide video down slightly to prevent clipping top content */
+  object-fit: contain; /* Full video frame with zero cropping */
   display: block;
 }
 
