@@ -7,7 +7,7 @@
   overflow: hidden;
   background-color: #ffffff;
   position: relative;
-  margin-top: 100px; /* Shifted slightly down for better header spacing */
+  margin-top: 138px; /* Shifted down by 1cm (38px) from 100px */
 }
 
 .exist-video {
