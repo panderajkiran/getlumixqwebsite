@@ -7,7 +7,7 @@
   overflow: hidden;
   background-color: #ffffff;
   position: relative;
-  margin-top: 138px; /* Shifted down by 1cm (38px) from 100px */
+  margin-top: 80px; /* Aligned flush right under the navbar */
 }
 
 .exist-video {
