@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && cp -r index.html styles images js vercel.json dist 2>/dev/null || cp -R index.html styles images js vercel.json dist"
+    "build": "mkdir -p dist && cp -r *.html styles js vercel.json dist 2>/dev/null || cp -R *.html styles js vercel.json dist"
   }
 }
