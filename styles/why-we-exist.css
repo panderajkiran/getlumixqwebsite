@@ -3,11 +3,7 @@
 ============================================================= */
 .exist-video-container {
   width: 100%;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  aspect-ratio: 16 / 9;
-  max-height: 80vh;
+  height: 75vh;
   overflow: hidden;
   background-color: #0b192c;
   position: relative;
@@ -22,7 +18,7 @@
 }
 
 .exist-content-wrapper {
-  max-width: 720px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 0 24px;
   box-sizing: border-box;
