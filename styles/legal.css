@@ -1,0 +1,79 @@
+/* =============================================================
+   LEGAL PAGES STYLING (PRIVACY POLICY & TERMS OF SERVICE)
+============================================================= */
+.legal-container {
+  max-width: 800px;
+  margin: 140px auto 80px auto; /* 140px top margin to push below the navbar */
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.legal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0b192c;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.legal-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #64748b;
+  margin-bottom: 48px;
+}
+
+.legal-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #0b192c;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.legal-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.legal-list {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.legal-list-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legal-container {
+    margin: 100px auto 48px auto;
+  }
+
+  .legal-title {
+    font-size: 2.2rem;
+  }
+
+  .legal-section-title {
+    font-size: 1.35rem;
+    margin-top: 36px;
+  }
+
+  .legal-text, .legal-list-item {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+}
