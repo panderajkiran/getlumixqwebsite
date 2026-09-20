@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="styles/variables.css?v=6">
   <link rel="stylesheet" href="styles/navbar.css?v=12">
   <link rel="stylesheet" href="styles/footer.css?v=1">
-  <link rel="stylesheet" href="styles/principles.css?v=5">
+  <link rel="stylesheet" href="styles/principles.css?v=7">
 </head>
 
 <body class="principles-page">
@@ -102,17 +102,36 @@
       </div>
     </header>
 
+    <!-- Audience lens: anyone can use every principle; filters highlight what tends to matter most -->
+    <nav class="principles-audience-bar" id="audienceFilterBar" aria-label="See where principles show up in different kinds of work">
+      <p class="audience-bar-kicker">These principles apply to everyone</p>
+      <p class="audience-bar-note">The standard is the same for every person at Lumi6. Choose a lens only if you want to see where a principle tends to show up most in a particular kind of work.</p>
+      <div class="audience-chip-row" role="tablist" aria-label="Principle audiences">
+        <button type="button" class="audience-filter-chip is-active" data-audience="all" aria-pressed="true">Everyone</button>
+        <button type="button" class="audience-filter-chip" data-audience="tech" aria-pressed="false">Tech &amp; Product</button>
+        <button type="button" class="audience-filter-chip" data-audience="design" aria-pressed="false">Brand &amp; Design</button>
+        <button type="button" class="audience-filter-chip" data-audience="sales" aria-pressed="false">Sales</button>
+        <button type="button" class="audience-filter-chip" data-audience="learning" aria-pressed="false">Learning</button>
+      </div>
+      <p class="audience-filter-status" id="audienceFilterStatus">11 principles · the same standard for everyone</p>
+    </nav>
+
     <!-- Main Principles Content Stream (Clean, uncluttered single-column layout) -->
     <div class="principles-content-stream">
 
       <!-- ================= PRINCIPLE 1 ================= -->
-      <article class="principle-master-card" id="principle-1" data-number="1">
+      <article class="principle-master-card" id="principle-1" data-number="1" data-audiences="everyone sales tech">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">01</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Accountability & Mindset</span>
               <h2 class="principle-h2">Own the Outcome</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="sales">Sales</span>
+                <span class="audience-mini-chip" data-audience="tech">Tech &amp; Product</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 1" aria-label="Copy link">
@@ -212,13 +231,18 @@
       </article>
 
       <!-- ================= PRINCIPLE 2 ================= -->
-      <article class="principle-master-card" id="principle-2" data-number="2">
+      <article class="principle-master-card" id="principle-2" data-number="2" data-audiences="everyone sales tech">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">02</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Initiative & Momentum</span>
               <h2 class="principle-h2">High Agency — Don't Wait to Be Told</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="sales">Sales</span>
+                <span class="audience-mini-chip" data-audience="tech">Tech &amp; Product</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 2" aria-label="Copy link">
@@ -319,13 +343,19 @@
       </article>
 
       <!-- ================= PRINCIPLE 3 ================= -->
-      <article class="principle-master-card" id="principle-3" data-number="3">
+      <article class="principle-master-card" id="principle-3" data-number="3" data-audiences="everyone tech design learning">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">03</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Reasoning & Invention</span>
               <h2 class="principle-h2">Think From First Principles</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="tech">Tech &amp; Product</span>
+                <span class="audience-mini-chip" data-audience="design">Brand &amp; Design</span>
+                <span class="audience-mini-chip" data-audience="learning">Learning</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 3" aria-label="Copy link">
@@ -409,13 +439,19 @@
       </article>
 
       <!-- ================= PRINCIPLE 4 ================= -->
-      <article class="principle-master-card" id="principle-4" data-number="4">
+      <article class="principle-master-card" id="principle-4" data-number="4" data-audiences="everyone design sales learning">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">04</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Empathy & Purpose</span>
               <h2 class="principle-h2">Start With the User</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="design">Brand &amp; Design</span>
+                <span class="audience-mini-chip" data-audience="sales">Sales</span>
+                <span class="audience-mini-chip" data-audience="learning">Learning</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 4" aria-label="Copy link">
@@ -456,7 +492,7 @@
         <!-- Why It Matters: The 3 Tests of Failure -->
         <div class="why-matters-banner">
           <span class="section-label-bar">Why it matters — The 3 Failure Tests</span>
-          <div class="speech-contrast-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="speech-contrast-grid failure-tests-grid">
             <div class="speech-box negative" style="text-align: center;">
               <span class="speech-tag" style="justify-content: center;">Still a Failure</span>
               <span class="speech-quote" style="font-size: 0.95rem;">A technically impressive product that nobody wants.</span>
@@ -510,13 +546,18 @@
       </article>
 
       <!-- ================= PRINCIPLE 5 ================= -->
-      <article class="principle-master-card" id="principle-5" data-number="5">
+      <article class="principle-master-card" id="principle-5" data-number="5" data-audiences="everyone tech sales">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">05</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Velocity & Iteration</span>
               <h2 class="principle-h2">Bias Toward Action</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="tech">Tech &amp; Product</span>
+                <span class="audience-mini-chip" data-audience="sales">Sales</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 5" aria-label="Copy link">
@@ -543,7 +584,7 @@
         <!-- Rapid Loop Visual -->
         <div class="card-section-row">
           <span class="section-label-bar">When Risk is Low & Decision is Reversible</span>
-          <div class="feature-tiles-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="feature-tiles-grid action-loop-grid">
             <div class="feature-tile-card" style="text-align: center; justify-content: center;"><div class="tile-text-content"><strong>1. Build</strong></div></div>
             <div class="feature-tile-card" style="text-align: center; justify-content: center;"><div class="tile-text-content"><strong>2. Test</strong></div></div>
             <div class="feature-tile-card" style="text-align: center; justify-content: center;"><div class="tile-text-content"><strong>3. Learn</strong></div></div>
@@ -597,13 +638,17 @@
       </article>
 
       <!-- ================= PRINCIPLE 6 ================= -->
-      <article class="principle-master-card" id="principle-6" data-number="6">
+      <article class="principle-master-card" id="principle-6" data-number="6" data-audiences="learning everyone">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">06</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Growth & Curiosity</span>
               <h2 class="principle-h2">Learn Relentlessly</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="learning">Learning</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 6" aria-label="Copy link">
@@ -647,7 +692,7 @@
         <!-- Expectation Action Chips -->
         <div class="card-section-row">
           <span class="section-label-bar">Our Expectation</span>
-          <div class="feature-tiles-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+          <div class="feature-tiles-grid expectation-chips-grid">
             <div class="feature-tile-card"><div class="tile-text-content">📖 <strong>Read</strong></div></div>
             <div class="feature-tile-card"><div class="tile-text-content">🔬 <strong>Experiment</strong></div></div>
             <div class="feature-tile-card"><div class="tile-text-content">❓ <strong>Ask questions</strong></div></div>
@@ -681,13 +726,19 @@
       </article>
 
       <!-- ================= PRINCIPLE 7 ================= -->
-      <article class="principle-master-card" id="principle-7" data-number="7">
+      <article class="principle-master-card" id="principle-7" data-number="7" data-audiences="everyone design tech learning">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">07</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Design & Elegance</span>
               <h2 class="principle-h2">Simplify Everything</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="design">Brand &amp; Design</span>
+                <span class="audience-mini-chip" data-audience="tech">Tech &amp; Product</span>
+                <span class="audience-mini-chip" data-audience="learning">Learning</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 7" aria-label="Copy link">
@@ -767,13 +818,16 @@
       </article>
 
       <!-- ================= PRINCIPLE 8 ================= -->
-      <article class="principle-master-card" id="principle-8" data-number="8">
+      <article class="principle-master-card" id="principle-8" data-number="8" data-audiences="everyone">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">08</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Intellectual Rigor</span>
               <h2 class="principle-h2">Challenge Ideas, Not People</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 8" aria-label="Copy link">
@@ -851,13 +905,17 @@
       </article>
 
       <!-- ================= PRINCIPLE 9 ================= -->
-      <article class="principle-master-card" id="principle-9" data-number="9">
+      <article class="principle-master-card" id="principle-9" data-number="9" data-audiences="design everyone">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">09</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Craft & Excellence</span>
               <h2 class="principle-h2">Raise the Bar</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="design">Brand &amp; Design</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 9" aria-label="Copy link">
@@ -928,13 +986,18 @@
       </article>
 
       <!-- ================= PRINCIPLE 10 ================= -->
-      <article class="principle-master-card" id="principle-10" data-number="10">
+      <article class="principle-master-card" id="principle-10" data-number="10" data-audiences="everyone tech design">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">10</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Execution & Tangibility</span>
               <h2 class="principle-h2">Build, Don't Just Discuss</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="tech">Tech &amp; Product</span>
+                <span class="audience-mini-chip" data-audience="design">Brand &amp; Design</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 10" aria-label="Copy link">
@@ -977,13 +1040,17 @@
       </article>
 
       <!-- ================= PRINCIPLE 11 (Professionalism & Time Punctuality) ================= -->
-      <article class="principle-master-card" id="principle-11" data-number="11">
+      <article class="principle-master-card" id="principle-11" data-number="11" data-audiences="everyone sales">
         <div class="card-header-banner">
           <div class="card-title-lockup">
             <div class="principle-number-stamp">11</div>
             <div class="principle-heading-text">
               <span class="principle-sub-tag">Standards & Work Ethic</span>
               <h2 class="principle-h2">Professionalism & Time Punctuality</h2>
+              <div class="principle-audience-chips">
+                <span class="audience-mini-chip" data-audience="everyone">Everyone</span>
+                <span class="audience-mini-chip" data-audience="sales">Sales</span>
+              </div>
             </div>
           </div>
           <button class="btn-card-copy-link" title="Copy direct link to Principle 11" aria-label="Copy link">
@@ -1062,8 +1129,8 @@
     <!-- Section: How These Principles Work Together -->
     <section class="system-flow-section">
       <span class="principles-pill-badge">The Operating Engine</span>
-      <h2 class="principles-main-title" style="font-size: 3rem; margin-top: 10px;">How These Principles Work Together</h2>
-      <p class="principles-lead-sub" style="font-size: 1.15rem; margin-bottom: 20px;">
+      <h2 class="principles-main-title section-block-title">How These Principles Work Together</h2>
+      <p class="principles-lead-sub section-block-lead">
         These principles are not independent. They form an integrated, compounding operating system:
       </p>
 
@@ -1109,10 +1176,10 @@
 
     <!-- Section: What We Expect From Every Person -->
     <section class="expectations-section">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
+      <div class="section-block-intro">
         <span class="principles-pill-badge">The Standard</span>
-        <h2 class="principles-main-title" style="font-size: 2.8rem; margin-top: 10px;">What We Expect From Every Person at Lumi6</h2>
-        <p class="principles-lead-sub" style="font-size: 1.1rem; margin-bottom: 0;">
+        <h2 class="principles-main-title section-block-title">What We Expect From Every Person at Lumi6</h2>
+        <p class="principles-lead-sub section-block-lead">
           You don't need to know everything. You don't need to be perfect. You don't need to have years of experience. But we expect you to:
         </p>
       </div>
@@ -1237,6 +1304,6 @@
 
   <!-- Scripts -->
   <script type="module" src="js/main.js?v=22"></script>
-  <script src="js/principles.js?v=4"></script>
+  <script src="js/principles.js?v=6"></script>
 </body>
 </html>

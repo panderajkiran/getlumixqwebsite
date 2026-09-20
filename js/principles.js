@@ -1,5 +1,6 @@
 /**
  * Lumi6 Principles Interactive Engine
+ * - Audience lens filtering
  * - One-click share & anchor link copy with toast notification
  * - Reading scroll progress indicator
  */
@@ -95,10 +96,72 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const card = btn.closest('.principle-master-card');
       if (card && card.id) {
-        const fullUrl = `${window.location.origin}${window.location.pathname}#${card.id}`;
-        history.replaceState(null, '', `#${card.id}`);
-        copyUrlToClipboard(fullUrl, `Link to Principle #${card.getAttribute('data-number') || ''} copied!`);
+        const shareUrl = new URL(window.location.href);
+        shareUrl.hash = card.id;
+        history.replaceState(null, '', `${shareUrl.pathname}${shareUrl.search}${shareUrl.hash}`);
+        copyUrlToClipboard(shareUrl.toString(), `Link to Principle #${card.getAttribute('data-number') || ''} copied!`);
       }
     });
   });
+
+  // 5. Audience lens highlighting — every principle applies to everyone
+  const VALID_AUDIENCES = ['all', 'tech', 'design', 'sales', 'learning'];
+  const AUDIENCE_STATUS = {
+    all: () => '11 principles · the same standard for everyone',
+    tech: () => 'All 11 still apply · highlighting where this shows up most in tech and product',
+    design: () => 'All 11 still apply · highlighting where this shows up most in brand and design',
+    sales: () => 'All 11 still apply · highlighting where this shows up most in sales',
+    learning: () => 'All 11 still apply · highlighting where this shows up most in learning and psychology'
+  };
+
+  const filterBar = document.getElementById('audienceFilterBar');
+  const chips = filterBar ? filterBar.querySelectorAll('.audience-filter-chip') : [];
+  const cards = document.querySelectorAll('.principle-master-card');
+  const status = document.getElementById('audienceFilterStatus');
+
+  const applyAudienceFilter = (audience, { updateUrl = true } = {}) => {
+    const lens = VALID_AUDIENCES.includes(audience) ? audience : 'all';
+
+    cards.forEach((card) => {
+      const tags = (card.getAttribute('data-audiences') || '').split(/\s+/).filter(Boolean);
+      const isFocus = lens !== 'all' && tags.includes(lens);
+      card.classList.remove('is-filtered-out');
+      card.classList.toggle('is-lens-focus', isFocus);
+      card.querySelectorAll('.audience-mini-chip').forEach((mini) => {
+        mini.classList.toggle('is-highlighted', lens !== 'all' && mini.dataset.audience === lens);
+      });
+    });
+
+    chips.forEach((chip) => {
+      const active = chip.dataset.audience === lens;
+      chip.classList.toggle('is-active', active);
+      chip.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    if (status) {
+      const writer = AUDIENCE_STATUS[lens] || AUDIENCE_STATUS.all;
+      status.textContent = writer();
+    }
+
+    if (updateUrl) {
+      const url = new URL(window.location.href);
+      if (lens === 'all') {
+        url.searchParams.delete('for');
+      } else {
+        url.searchParams.set('for', lens);
+      }
+      history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+    }
+
+    updateProgress();
+  };
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      applyAudienceFilter(chip.dataset.audience);
+    });
+  });
+
+  const requestedLens = new URLSearchParams(window.location.search).get('for');
+  applyAudienceFilter(requestedLens || 'all', { updateUrl: false });
 });

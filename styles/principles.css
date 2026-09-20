@@ -260,11 +260,13 @@ body.principles-page {
   width: 100%;
 }
 
-.principle-master-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 
-    0 25px 60px rgba(11, 25, 44, 0.11),
-    0 0 0 1px rgba(177, 76, 51, 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .principle-master-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+      0 25px 60px rgba(11, 25, 44, 0.11),
+      0 0 0 1px rgba(177, 76, 51, 0.2);
+  }
 }
 
 /* Card Header Banner */
@@ -306,6 +308,7 @@ body.principles-page {
   flex-direction: column;
   gap: 4px;
   flex: 1;
+  min-width: 0;
 }
 
 .principle-sub-tag {
@@ -985,6 +988,160 @@ body.principles-page {
 }
 
 /* =============================================================
+   AUDIENCE FILTER BAR
+============================================================= */
+.principles-audience-bar {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 28px 32px 24px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(11, 25, 44, 0.06);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.audience-bar-kicker {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0b192c;
+  margin: 0 0 8px 0;
+}
+
+.audience-bar-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(11, 25, 44, 0.7);
+  max-width: 640px;
+  margin: 0 auto 20px auto;
+}
+
+.audience-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.audience-filter-chip {
+  appearance: none;
+  border: 1px solid rgba(11, 25, 44, 0.12);
+  background: #ffffff;
+  color: #0b192c;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 10px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(11, 25, 44, 0.04);
+}
+
+.audience-filter-chip:hover {
+  border-color: rgba(177, 76, 51, 0.35);
+  color: #b14c33;
+}
+
+.audience-filter-chip.is-active {
+  background: #0b192c;
+  color: #fffbf2;
+  border-color: #0b192c;
+  box-shadow: 0 8px 18px rgba(11, 25, 44, 0.18);
+}
+
+.audience-filter-chip.is-active:hover {
+  color: #fffbf2;
+  background: #1a3254;
+}
+
+.audience-filter-status {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #b14c33;
+  margin: 0;
+  min-height: 1.2em;
+}
+
+.principle-audience-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.audience-mini-chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(11, 25, 44, 0.55);
+  background: rgba(11, 25, 44, 0.05);
+  border: 1px solid rgba(11, 25, 44, 0.08);
+  padding: 3px 8px;
+  border-radius: 100px;
+}
+
+.audience-mini-chip.is-highlighted {
+  color: #b14c33;
+  background: rgba(177, 76, 51, 0.12);
+  border-color: rgba(177, 76, 51, 0.28);
+}
+
+.principle-master-card.is-lens-focus {
+  box-shadow:
+    0 15px 45px rgba(11, 25, 44, 0.07),
+    0 0 0 1.5px rgba(177, 76, 51, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+.failure-tests-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.action-loop-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.expectation-chips-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.section-block-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.section-block-title {
+  margin-top: 10px;
+}
+
+.section-block-lead {
+  margin-bottom: 20px;
+}
+
+.section-block-intro .section-block-lead {
+  margin-bottom: 0;
+}
+
+body.principles-page .noise-overlay {
+  width: 100%;
+  height: 100%;
+}
+
+/* =============================================================
    MOBILE & TABLET RESPONSIVE BREAKPOINTS
 ============================================================= */
 @media (max-width: 860px) {
@@ -1002,14 +1159,40 @@ body.principles-page {
   .system-nodes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .failure-tests-grid {
+    grid-template-columns: 1fr;
+  }
+  .action-loop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+  body.principles-page {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+  }
+
   .principles-wrapper {
     padding: 110px 16px 60px 16px;
+    max-width: 100%;
   }
   .principles-hero-section {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+  }
+  .principles-audience-bar {
+    padding: 22px 16px 18px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+  }
+  .audience-chip-row {
+    gap: 8px;
+    justify-content: center;
+  }
+  .audience-filter-chip {
+    padding: 9px 14px;
+    font-size: 0.82rem;
   }
   .vision-master-card {
     padding: 28px 20px;
@@ -1034,7 +1217,9 @@ body.principles-page {
     width: 28px;
     height: 28px;
   }
-  .speech-contrast-grid {
+  .speech-contrast-grid,
+  .failure-tests-grid,
+  .action-loop-grid {
     grid-template-columns: 1fr;
   }
   .prominent-resource-card {
@@ -1047,6 +1232,15 @@ body.principles-page {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    min-width: 0;
+  }
+  .resource-info-title,
+  .resource-info-sub,
+  .speech-quote,
+  .graphic-lead-quote,
+  .principle-h2 {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .resource-action-pill {
     width: 100%;
@@ -1070,29 +1264,55 @@ body.principles-page {
     gap: 14px;
     padding: 16px 18px;
   }
+  .system-conclusion-banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 18px;
+    padding: 16px 20px;
+  }
+  .expectations-power-quote {
+    padding: 22px 18px;
+  }
 }
 
 @media (max-width: 480px) {
   .principles-wrapper {
     padding: 100px 12px 50px 12px;
   }
+  .principles-audience-bar {
+    padding: 18px 12px 16px;
+    border-radius: 18px;
+  }
+  .audience-bar-kicker {
+    font-size: 1.1rem;
+  }
+  .audience-bar-note {
+    font-size: 0.88rem;
+  }
   .card-header-banner {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 10px;
   }
   .card-title-lockup {
+    align-items: flex-start;
     gap: 12px;
   }
   .principle-number-stamp {
-    width: 46px;
-    height: 46px;
-    font-size: 1.25rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
     border-radius: 12px;
+    margin-top: 2px;
   }
   .btn-card-copy-link {
     width: 36px;
     height: 36px;
+    margin-top: 2px;
+  }
+  .principle-h2 {
+    font-size: 1.28rem;
+    line-height: 1.25;
   }
   .principle-master-card {
     padding: 22px 14px;
@@ -1102,11 +1322,16 @@ body.principles-page {
     padding: 22px 14px;
     border-radius: 18px;
   }
-  .feature-tiles-grid {
-    grid-template-columns: 1fr;
-  }
+  .feature-tiles-grid,
+  .expectation-chips-grid,
   .expectations-grid {
     grid-template-columns: 1fr;
+  }
+  .quote-highlight-frame,
+  .why-matters-banner,
+  .speech-box {
+    padding-left: 14px;
+    padding-right: 14px;
   }
   .manifesto-actions {
     flex-direction: column;
@@ -1117,5 +1342,17 @@ body.principles-page {
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-master-card,
+  .principle-master-card,
+  .principles-audience-bar,
+  .system-flow-section,
+  .expectations-section,
+  .manifesto-section {
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
   }
 }
