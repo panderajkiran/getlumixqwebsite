@@ -1,5 +1,5 @@
 /**
- * Lumi6 Principles Interactive Engine
+ * Lumix Principles Interactive Engine
  * - Audience lens filtering
  * - One-click share & anchor link copy with toast notification
  * - Reading scroll progress indicator
@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
   shareButtons.forEach(btn => {
     btn.addEventListener('click', async () => {
       const shareData = {
-        title: 'The Principles We Live By | Lumi6',
-        text: 'The 11 foundational principles and operating ethos of Lumi6.',
+        title: 'The Principles We Live By | Lumix',
+        text: 'The 11 foundational principles and operating ethos of Lumix.',
         url: window.location.href
       };
 

@@ -1,8 +1,8 @@
-# Lumi6 Platform Showcase
+# Lumix Platform Showcase
 
-Lumi6 transforms goals into personalized learning journeys. From understanding each learner's context to generating realistic practice, delivering feedback, and adapting every step, the platform helps people build workplace capability through continuous practice.
+Lumix transforms goals into personalized learning journeys. From understanding each learner's context to generating realistic practice, delivering feedback, and adapting every step, the platform helps people build workplace capability through continuous practice.
 
-This repository houses the premium, highly interactive static showcase website for the Lumi6 platform.
+This repository houses the premium, highly interactive static showcase website for the Lumix platform.
 
 ---
 
