@@ -150,9 +150,9 @@
 
 
 .hero-heading {
-  font-family: 'Outfit', sans-serif; /* Outfit for Brand Moments */
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif); /* Modern Sans for Brand Moments & Headings */
   font-size: 4.5rem; /* ~72px (Hero 72-88px range) - slightly smaller for better layout fit */
-  font-weight: 700; /* Outfit 700 (Bold) */
+  font-weight: 700;
   line-height: 1.08; /* Increased line-height for better word spacing */
   letter-spacing: -0.04em;
   color: #0b192c; /* Deep slate blue */
@@ -160,7 +160,7 @@
 }
 
 .hero-description {
-  font-family: 'Inter', sans-serif; /* Inter for Reading */
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   font-size: 1.15rem; /* ~18px (Body 18-20px range) */
   font-weight: 400; /* Inter 400 (Regular) */
   line-height: 1.75; /* Increased spacing for better legibility */
@@ -248,7 +248,7 @@
 }
 
 .scroll-badge {
-  font-family: 'Inter', sans-serif; /* Inter for Labels */
+  font-family: var(--font-neo, 'Inter', sans-serif);
   font-size: 0.75rem; /* ~12px (Caption 14px range / small label) */
   font-weight: 500; /* Inter 500 (Medium) */
   letter-spacing: 0.08em;
@@ -259,7 +259,7 @@
 }
 
 .spacer-content h2 {
-  font-family: 'Inter', sans-serif; /* Inter for Massive Section Statements */
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 2.8rem; /* ~45px (Section Title 42-52px range) */
   font-weight: 600; /* Inter 600 (SemiBold) */
   line-height: 1.15;
@@ -269,7 +269,7 @@
 }
 
 .spacer-content p {
-  font-family: 'Inter', sans-serif; /* Inter for Reading */
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   font-size: 1.15rem; /* ~18px (Body 18-20px range) */
   font-weight: 400; /* Inter 400 (Regular) */
   line-height: 1.6;

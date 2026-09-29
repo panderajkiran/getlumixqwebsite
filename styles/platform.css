@@ -37,7 +37,7 @@
 }
 
 .platform-tag {
-  font-family: 'Inter', sans-serif; /* Inter for Labels */
+  font-family: var(--font-neo, 'Inter', sans-serif);
   font-size: 0.75rem;
   font-weight: 500; /* Inter 500 (Medium) */
   letter-spacing: 0.12em;
@@ -46,7 +46,7 @@
 }
 
 .platform-heading {
-  font-family: 'Inter', sans-serif; /* Inter for Section Headings */
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 2.8rem; /* ~45px (Section Title 42-52px range) */
   font-weight: 600; /* Inter 600 (SemiBold) */
   line-height: 1.1;
@@ -55,7 +55,7 @@
 }
 
 .platform-description {
-  font-family: 'Inter', sans-serif; /* Inter for Reading */
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   font-size: 1.15rem; /* ~18px (Body 18-20px range) */
   font-weight: 400; /* Inter 400 (Regular) */
   line-height: 1.6;
@@ -151,7 +151,7 @@
 }
 
 .platform-callout {
-  font-family: 'Inter', sans-serif; /* Inter for Reading / Callouts */
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   font-size: 1.25rem; /* ~20px (Body 18-20px range) */
   font-weight: 500; /* Inter 500 (Medium) */
   line-height: 1.45;

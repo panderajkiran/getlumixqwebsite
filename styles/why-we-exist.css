@@ -25,7 +25,7 @@
 }
 
 .exist-heading {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 3.2rem;
   font-weight: 700;
   color: #0b192c;
@@ -35,7 +35,7 @@
 }
 
 .exist-text {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.85;

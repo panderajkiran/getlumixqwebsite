@@ -9,7 +9,7 @@
 }
 
 .legal-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 3rem;
   font-weight: 700;
   color: #0b192c;
@@ -19,14 +19,14 @@
 }
 
 .legal-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-neo, 'Inter', sans-serif);
   font-size: 1.05rem;
   color: #64748b;
   margin-bottom: 48px;
 }
 
 .legal-section-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.6rem;
   font-weight: 600;
   color: #0b192c;
@@ -36,7 +36,7 @@
 }
 
 .legal-text {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   font-size: 1.05rem;
   line-height: 1.8;
   color: #334155;

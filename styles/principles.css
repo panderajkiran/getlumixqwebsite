@@ -16,7 +16,7 @@ body.principles-page {
   color: #0b192c;
   min-height: 100vh;
   position: relative;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
   overflow-x: hidden;
 }
 
@@ -129,7 +129,7 @@ body.principles-page {
 }
 
 .principles-main-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2.4rem, 6vw, 4.2rem);
   font-weight: 800;
   line-height: 1.1;
@@ -191,7 +191,7 @@ body.principles-page {
 }
 
 .vision-title-statement {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.5rem, 3.5vw, 2.1rem);
   font-weight: 800;
   line-height: 1.25;
@@ -293,7 +293,7 @@ body.principles-page {
   border-radius: 18px;
   background: linear-gradient(135deg, #0b192c, #1a3254);
   color: #fffbf2;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.65rem;
   font-weight: 800;
   display: flex;
@@ -321,7 +321,7 @@ body.principles-page {
 }
 
 .principle-h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.45rem, 3.8vw, 2.2rem);
   font-weight: 800;
   line-height: 1.2;
@@ -393,7 +393,7 @@ body.principles-page {
 }
 
 .graphic-lead-quote {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.15rem, 2.5vw, 1.4rem);
   font-weight: 700;
   line-height: 1.38;
@@ -476,7 +476,7 @@ body.principles-page {
 }
 
 .quote-frame-text {
-  font-family: 'Outfit', 'Inter', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.15rem, 2.5vw, 1.32rem);
   font-weight: 600;
   line-height: 1.48;
@@ -653,7 +653,7 @@ body.principles-page {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 12px;
   border-radius: 10px;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 0.8rem;
   font-weight: 700;
   color: #ff9e42;
@@ -669,7 +669,7 @@ body.principles-page {
 }
 
 .resource-info-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
@@ -764,7 +764,7 @@ body.principles-page {
   border-radius: 10px;
   background: #0b192c;
   color: #fffbf2;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-weight: 800;
   font-size: 1rem;
   display: flex;
@@ -790,7 +790,7 @@ body.principles-page {
   color: #fffbf2;
   padding: 20px 36px;
   border-radius: 50px;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   font-weight: 700;
   display: inline-block;
@@ -868,7 +868,7 @@ body.principles-page {
 }
 
 .power-quote-punchline {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 800;
   color: #b14c33;
@@ -900,7 +900,7 @@ body.principles-page {
 }
 
 .manifesto-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -922,7 +922,7 @@ body.principles-page {
 }
 
 .manifesto-standout {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.4rem, 3.5vw, 1.85rem);
   font-weight: 800;
   color: #0b192c;
@@ -1005,7 +1005,7 @@ body.principles-page {
 }
 
 .audience-bar-kicker {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(1.15rem, 2.4vw, 1.45rem);
   font-weight: 700;
   letter-spacing: -0.02em;

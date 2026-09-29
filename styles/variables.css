@@ -7,12 +7,19 @@
   padding: 0;
 }
 
+:root {
+  /* 3-Tier Font System */
+  --font-modern: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-humanist: 'Fira Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-neo: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 html, body {
   width: 100%;
   min-height: 100%;
   background-color: #ffffff; /* Plain white foundation background */
   overflow-x: clip; /* Fix for CSS position: sticky scroll stacking support */
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-humanist);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
