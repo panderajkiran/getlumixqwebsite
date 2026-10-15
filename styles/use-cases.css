@@ -1,0 +1,581 @@
+/* -------------------------------------------------------------
+   USE CASES SECTION STYLES — LUMIX LUXE STACKING CARDS
+   Matches the luxury architectural corporate aesthetic of the reference
+------------------------------------------------------------- */
+
+/* Google Fonts - Editorial Serif for high-end headers */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --uc-bronze-light: #ab6a4c;
+  --uc-bronze: #8a4b2f;
+  --uc-bronze-dark: #6e361e;
+  --uc-bronze-gradient: linear-gradient(180deg, #9b5e41 0%, #83472c 50%, #6e351d 100%);
+  --uc-bronze-glow: rgba(138, 75, 47, 0.28);
+  --uc-card-bg: #faf7f2;
+  --uc-card-border: rgba(184, 168, 150, 0.35);
+  --uc-card-radius: 28px;
+  --uc-text-dark: #111822;
+  --uc-text-muted: #535c68;
+}
+
+/* -------------------------------------------------------------
+   SECTION WRAPPER (Integrated directly inside index.html)
+------------------------------------------------------------- */
+.use-cases-section {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 110px 0 130px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbf9f5 10%, #f7f5f0 50%, #fbf9f5 90%, #ffffff 100%);
+  overflow-x: clip;
+}
+
+/* Header */
+.use-cases-header {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.use-cases-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0b192c;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.use-cases-heading {
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0b192c;
+  max-width: 800px;
+  margin: 0 auto 16px;
+}
+
+.use-cases-subheading {
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--uc-text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------
+   WATERMELON MARIGOLD GRADIENT BUTTONS (from 21st.dev)
+------------------------------------------------------------- */
+.btn-bronze-luxe,
+.btn-watermelon-marigold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  background-color: #FF5F6D !important;
+  background-image: linear-gradient(120deg, #FF5F6D 0%, #FFC371 100%) !important;
+  color: #ffffff !important;
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 
+    0 10px 25px -5px rgba(255, 95, 109, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.btn-bronze-luxe > span,
+.btn-bronze-luxe > svg,
+.btn-watermelon-marigold > span,
+.btn-watermelon-marigold > svg {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-bronze-luxe .gradient-background-wm,
+.btn-watermelon-marigold .gradient-background-wm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  container-type: size;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.btn-bronze-luxe .gradient-background-wm-inner,
+.btn-watermelon-marigold .gradient-background-wm-inner {
+  position: absolute;
+  inset: -0.8cqmin;
+  filter: blur(0.4cqmin);
+  background-color: #FF5F6D;
+  background-image: linear-gradient(120deg, #FF5F6D 0%, #FFC371 100%);
+  width: calc(100% + 1.6cqmin);
+  height: calc(100% + 1.6cqmin);
+}
+
+.btn-bronze-luxe:hover,
+.btn-watermelon-marigold:hover {
+  filter: brightness(1.05) saturate(1.08) !important;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 14px 30px -4px rgba(255, 95, 109, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-bronze-luxe:active,
+.btn-watermelon-marigold:active {
+  transform: translateY(0);
+}
+
+/* -------------------------------------------------------------
+   STICKY STACKING CARDS CONTAINER
+------------------------------------------------------------- */
+.sticky-usecases-container {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+}
+
+/* Stacking Card Item Wrapper */
+.sticky-card-wrapper {
+  position: sticky;
+  top: 105px;
+  /* Pins cleanly underneath the fixed capsule navbar */
+  margin-bottom: 85px;
+  /* Scroll runway for next card to glide up */
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+/* Inner 2-Column Luxury Card Frame */
+.sticky-card-frame {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 520px;
+  background: #fbf9f5;
+  border-radius: var(--uc-card-radius);
+  border: 1px solid var(--uc-card-border);
+  box-shadow:
+    0 25px 60px -15px rgba(22, 28, 36, 0.16),
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Left Column: Text & Content */
+.sticky-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 48px;
+  background: linear-gradient(135deg, #fdfcf9 0%, #f6f2ea 100%);
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Header Topbar with Category Eyebrow and Segmented Toggle */
+.sticky-card-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.sticky-card-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-neo, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--uc-bronze);
+  margin-bottom: 0;
+}
+
+.sticky-card-eyebrow .eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--uc-bronze);
+  opacity: 0.6;
+}
+
+/* -------------------------------------------------------------
+   INTERACTIVE CHALLENGE / SOLUTION TOGGLE PILL
+   Tactile, bespoke architectural segmented switch
+------------------------------------------------------------- */
+.uc-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(11, 25, 44, 0.05);
+  border: 1px solid rgba(184, 168, 150, 0.35);
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+  box-shadow: inset 0 1px 2px rgba(11, 25, 44, 0.04);
+}
+
+.uc-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-neo, 'Inter', sans-serif);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--uc-text-muted);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+}
+
+.uc-toggle-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.4;
+  transition: all 0.25s ease;
+}
+
+.uc-toggle-btn:hover {
+  color: var(--uc-text-dark);
+}
+
+.uc-toggle-btn.active {
+  background: #ffffff;
+  color: #0b192c;
+  font-weight: 600;
+  box-shadow:
+    0 2px 8px rgba(11, 25, 44, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.uc-toggle-btn[data-tab="solution"].active {
+  color: var(--uc-bronze-dark);
+}
+
+.uc-toggle-btn.active .uc-toggle-dot {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.uc-toggle-btn[data-tab="solution"].active .uc-toggle-dot {
+  background: var(--uc-bronze);
+}
+
+/* Panes: Challenge & Solution crossfade */
+.uc-pane {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.uc-pane.active {
+  display: block;
+  animation: ucPaneFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes ucPaneFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Solution Micro-Pill indicator */
+.uc-solution-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 11px;
+  border-radius: 6px;
+  background: rgba(138, 75, 47, 0.08);
+  border: 1px solid rgba(138, 75, 47, 0.2);
+  font-family: var(--font-neo, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--uc-bronze);
+  margin-bottom: 14px;
+}
+
+.uc-solution-highlight svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--uc-bronze);
+}
+
+.sticky-card-title {
+  font-family: var(--font-modern, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 2.7vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #0b192c;
+  margin-bottom: 18px;
+}
+
+.sticky-card-desc {
+  font-family: var(--font-humanist, 'Fira Sans', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 350;
+  line-height: 1.62;
+  color: var(--uc-text-muted);
+  max-width: 500px;
+  margin-bottom: 26px;
+}
+
+/* Feature Highlights / Tags */
+.sticky-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-bottom: 34px;
+}
+
+.sticky-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: var(--font-neo, 'Inter', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sticky-card-tag svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* Friction / Challenge Tags (Subtle, Muted Slate) */
+.sticky-card-tag.tag-friction {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(11, 25, 44, 0.1);
+  color: #4b5563;
+}
+
+.sticky-card-tag.tag-friction svg {
+  color: #8b95a5;
+}
+
+/* Solution Tags (Refined Lumix Bronze Outline) */
+.sticky-card-tag.tag-solution {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(138, 75, 47, 0.25);
+  color: #111822;
+}
+
+.sticky-card-tag.tag-solution svg {
+  color: var(--uc-bronze);
+}
+
+.sticky-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Right Column: Visual & Image */
+.sticky-card-image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  overflow: hidden;
+  background-color: #1b1e22;
+}
+
+.sticky-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sticky-card-wrapper:hover .sticky-card-image {
+  transform: scale(1.03);
+}
+
+/* Subtle Vignette & Lighting overlay */
+.sticky-card-image-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, rgba(247, 244, 238, 0.2) 0%, transparent 20%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 40%);
+}
+
+/* Status Pill in Image Top Corner */
+.sticky-image-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(17, 24, 34, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-family: var(--font-neo, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.sticky-image-badge.badge-solution {
+  background: rgba(110, 54, 30, 0.78);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 18px rgba(110, 54, 30, 0.35);
+}
+
+/* 4-Point Star Accent from reference image */
+.sticky-star-accent {
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
+  animation: starPulse 4s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.12) rotate(4deg);
+    opacity: 1;
+  }
+}
+
+/* -------------------------------------------------------------
+   RESPONSIVE LAYOUT
+------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .sticky-card-frame {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .sticky-card-content {
+    padding: 40px 32px;
+  }
+
+  .sticky-card-image-box {
+    height: 320px;
+  }
+
+  .sticky-card-title {
+    font-size: 2.2rem;
+  }
+
+  .sticky-card-wrapper {
+    top: 90px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .use-cases-section {
+    padding: 70px 0 90px;
+  }
+
+  .sticky-card-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .uc-toggle-pill {
+    width: 100%;
+    display: flex;
+  }
+
+  .uc-toggle-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 7px 10px;
+    font-size: 0.74rem;
+  }
+
+  .sticky-card-content {
+    padding: 32px 20px;
+  }
+
+  .sticky-card-title {
+    font-size: 1.85rem;
+  }
+
+  .sticky-card-desc {
+    font-size: 0.98rem;
+  }
+
+  .sticky-card-tags {
+    margin-bottom: 26px;
+  }
+
+  .sticky-card-image-box {
+    height: 260px;
+  }
+}

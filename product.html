@@ -19,7 +19,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles/variables.css?v=6">
-  <link rel="stylesheet" href="styles/navbar.css?v=12">
+  <link rel="stylesheet" href="styles/navbar.css?v=16">
   <link rel="stylesheet" href="styles/hero.css?v=102">
   <link rel="stylesheet" href="styles/platform.css?v=30">
   <link rel="stylesheet" href="styles/product.css?v=28">
@@ -33,14 +33,49 @@
   <!-- Adaptive Scroll-to-Capsule Navbar -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo" style="text-decoration: none;">
+      <a href="index.html" class="nav-logo" aria-label="Lumix Homepage">
         <img class="logo-compass" src="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png" alt="Lumix Icon">
         <span class="logo-text">Lumix</span>
       </a>
       <ul class="nav-menu">
-        <li><a href="index.html#platform" class="nav-link" data-section="platform">Platform</a></li>
-        <li><a href="index.html#product" class="nav-link" data-section="product">Capabilities</a></li>
-        <li><a href="index.html#faq" class="nav-link" data-section="faq">FAQ</a></li>
+        <li>
+          <a href="index.html#platform" class="nav-link" data-section="platform" aria-label="Platform">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+            <span class="nav-tooltip">Platform</span>
+          </a>
+        </li>
+        <li>
+          <a href="product.html" class="nav-link active" data-section="product" aria-label="Capabilities" aria-current="page">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L14.4 8.6L21 11L14.4 13.4L12 20L9.6 13.4L3 11L9.6 8.6L12 2Z" />
+              <path d="M19 2L19.8 4.2L22 5L19.8 5.8L19 8L18.2 5.8L16 5L18.2 4.2L19 2Z" />
+            </svg>
+            <span class="nav-tooltip">Capabilities</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#use-cases" class="nav-link" data-section="use-cases" aria-label="Use Cases">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+            <span class="nav-tooltip">Use Cases</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html#faq" class="nav-link" data-section="faq" aria-label="FAQ">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+            <span class="nav-tooltip">FAQ</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-buttons">
         <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-signin">Contact Us</a>
@@ -292,6 +327,6 @@
     </div>
   </footer>
 
-  <script type="module" src="js/main.js?v=22"></script>
+  <script type="module" src="js/main.js?v=25"></script>
 </body>
 </html>
