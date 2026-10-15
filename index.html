@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lumix transforms goals into personalized learning journeys. Build workplace capability through continuous practice.">
+  <meta name="description"
+    content="Lumix transforms goals into personalized learning journeys. Build workplace capability through continuous practice.">
   <title>Lumix</title>
-  <link rel="icon" type="image/png" href="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png">
-  
+  <link rel="icon" type="image/png"
+    href="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png">
+
   <!-- Preload Critical Hero Background Image -->
-  <link rel="preload" href="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/4%20comprsd.jpg" as="image">
+  <link rel="preload" href="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Gradient%20assets/4%20comprsd.jpg"
+    as="image">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +22,11 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles/variables.css?v=6">
-  <link rel="stylesheet" href="styles/navbar.css?v=12">
+  <link rel="stylesheet" href="styles/navbar.css?v=16">
   <link rel="stylesheet" href="styles/hero.css?v=102">
   <link rel="stylesheet" href="styles/platform.css?v=30">
   <link rel="stylesheet" href="styles/product.css?v=28">
+  <link rel="stylesheet" href="styles/use-cases.css?v=3">
   <link rel="stylesheet" href="styles/faq.css?v=9">
   <link rel="stylesheet" href="styles/footer.css?v=1">
 </head>
@@ -34,14 +38,51 @@
   <!-- Adaptive Scroll-to-Capsule Navbar -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <img class="logo-compass" src="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png" alt="Lumix Icon">
+      <a href="index.html" class="nav-logo" aria-label="Lumix Homepage">
+        <img class="logo-compass"
+          src="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png"
+          alt="Lumix Icon">
         <span class="logo-text">Lumix</span>
-      </div>
+      </a>
       <ul class="nav-menu">
-        <li><a href="#platform" class="nav-link" data-section="platform">Platform</a></li>
-        <li><a href="#product" class="nav-link" data-section="product">Capabilities</a></li>
-        <li><a href="#faq" class="nav-link" data-section="faq">FAQ</a></li>
+        <li>
+          <a href="#platform" class="nav-link" data-section="platform" aria-label="Platform">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+            <span class="nav-tooltip">Platform</span>
+          </a>
+        </li>
+        <li>
+          <a href="#product" class="nav-link" data-section="product" aria-label="Capabilities">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L14.4 8.6L21 11L14.4 13.4L12 20L9.6 13.4L3 11L9.6 8.6L12 2Z" />
+              <path d="M19 2L19.8 4.2L22 5L19.8 5.8L19 8L18.2 5.8L16 5L18.2 4.2L19 2Z" />
+            </svg>
+            <span class="nav-tooltip">Capabilities</span>
+          </a>
+        </li>
+        <li>
+          <a href="#use-cases" class="nav-link" data-section="use-cases" aria-label="Use Cases">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+            <span class="nav-tooltip">Use Cases</span>
+          </a>
+        </li>
+        <li>
+          <a href="#faq" class="nav-link" data-section="faq" aria-label="FAQ">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+            <span class="nav-tooltip">FAQ</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-buttons">
         <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-signin">Contact Us</a>
@@ -95,9 +136,13 @@
   <!-- Transition statement Section -->
   <section class="transition-section" id="transition">
     <div class="transition-container">
-      <img src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Logo/compass_orange_coloured_needle_white_dial_black_bo_019f6754-1bfe-7ed7-a4d7-04d6def21662.svg" alt="Compass Logo" class="transition-logo">
+      <img
+        src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Logo/compass_orange_coloured_needle_white_dial_black_bo_019f6754-1bfe-7ed7-a4d7-04d6def21662.svg"
+        alt="Compass Logo" class="transition-logo">
       <p class="transition-text">
-        Lumix transforms goals into personalized learning journeys. From understanding each learner's context to generating realistic practice, delivering feedback, and adapting every step, the platform helps people build workplace capability through continuous practice.
+        Lumix transforms goals into personalized learning journeys. From understanding each learner's context to
+        generating realistic practice, delivering feedback, and adapting every step, the platform helps people build
+        workplace capability through continuous practice.
       </p>
     </div>
   </section>
@@ -109,7 +154,8 @@
       <div class="platform-info">
         <span class="platform-tag">The Platform</span>
         <h2 class="platform-heading">The AI Native Platform for Human Capability</h2>
-        <p class="platform-description">Purpose built for enterprises to develop the human capabilities that drive performance in the AI era.</p>
+        <p class="platform-description">Purpose built for enterprises to develop the human capabilities that drive
+          performance in the AI era.</p>
       </div>
 
       <!-- Right Column: Product Video Player -->
@@ -133,7 +179,7 @@
     </div>
 
     <div class="capabilities-grid-container">
-      
+
       <!-- Card 1: Compass Agent -->
       <div class="capability-grid-card">
         <div class="card-header-row">
@@ -142,12 +188,15 @@
             <h3 class="card-grid-title">Compass Agent</h3>
           </div>
           <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <p class="card-grid-description">A personalized AI partner that understands you, plans your journey, and guides every step of your growth.</p>
+        <p class="card-grid-description">A personalized AI partner that understands you, plans your journey, and guides
+          every step of your growth.</p>
         <div class="card-grid-media">
-          <video class="card-grid-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/compass%20agent%20vid.mp4" autoplay loop muted playsinline></video>
+          <video class="card-grid-video"
+            src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/compass%20agent%20vid.mp4" autoplay loop
+            muted playsinline></video>
         </div>
       </div>
 
@@ -159,12 +208,15 @@
             <h3 class="card-grid-title">AI Roleplay & Coach</h3>
           </div>
           <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <p class="card-grid-description">Engage in realistic, multi-layered simulations to practice critical conversations and receive instant actionable coaching feedback.</p>
+        <p class="card-grid-description">Engage in realistic, multi-layered simulations to practice critical
+          conversations and receive instant actionable coaching feedback.</p>
         <div class="card-grid-media">
-          <video class="card-grid-video" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/ai%20roleplay%20ands%20coach.mp4" autoplay loop muted playsinline></video>
+          <video class="card-grid-video"
+            src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Video/ai%20roleplay%20ands%20coach.mp4"
+            autoplay loop muted playsinline></video>
         </div>
       </div>
 
@@ -176,12 +228,15 @@
             <h3 class="card-grid-title">Skill & Capabilities</h3>
           </div>
           <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <p class="card-grid-description">Master future workplace capabilities, decision-making, and critical leadership competencies through guided simulations.</p>
+        <p class="card-grid-description">Master future workplace capabilities, decision-making, and critical leadership
+          competencies through guided simulations.</p>
         <div class="card-grid-media">
-          <img class="card-grid-graphic" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/skills%20uture%20card.jpg" alt="Future Skills Graphic">
+          <img class="card-grid-graphic"
+            src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/skills%20uture%20card.jpg"
+            alt="Future Skills Graphic">
         </div>
       </div>
 
@@ -193,15 +248,742 @@
             <h3 class="card-grid-title">Intelligence & Analytics</h3>
           </div>
           <svg class="card-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <p class="card-grid-description">Measure, analyze, and map organizational capabilities and growth patterns in real-time with comprehensive skill dashboards.</p>
+        <p class="card-grid-description">Measure, analyze, and map organizational capabilities and growth patterns in
+          real-time with comprehensive skill dashboards.</p>
         <div class="card-grid-media">
-          <img class="card-grid-graphic" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/Report%20cmprsd.jpg" alt="Intelligence Analytics Report">
+          <img class="card-grid-graphic"
+            src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Misc/Report%20cmprsd.jpg"
+            alt="Intelligence Analytics Report">
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Section: Use Cases (Sticky Stacking Cards Layout) -->
+  <section class="use-cases-section" id="use-cases">
+    <div class="use-cases-header">
+      <span class="use-cases-tag">Enterprise Solutions</span>
+      <h2 class="use-cases-heading">
+        Transforming Enterprise Performance into Actionable Mastery
+      </h2>
+      <p class="use-cases-subheading">
+        Explore how leading organizations leverage Lumix simulations to prepare teams for high-stakes decisions,
+        leadership moments, and complex operational challenges.
+      </p>
+    </div>
+
+    <div class="sticky-usecases-container">
+      <!-- Card 1: Leadership Development -->
+      <div class="sticky-card-wrapper" style="z-index: 1;">
+        <article class="sticky-card-frame">
+          <!-- Content (Left Column) -->
+          <div class="sticky-card-content">
+            <div class="sticky-card-topbar">
+              <div class="sticky-card-eyebrow">
+                <span class="eyebrow-line"></span>
+                01 &bull; Leadership Development
+              </div>
+
+              <!-- Segmented Challenge / Solution Toggle -->
+              <div class="uc-toggle-pill" role="tablist" aria-label="Toggle Challenge and Solution for Leadership Development">
+                <button type="button" class="uc-toggle-btn active" data-tab="challenge" role="tab" aria-selected="true" tabindex="0">
+                  <span class="uc-toggle-dot"></span>
+                  The Challenge
+                </button>
+                <button type="button" class="uc-toggle-btn" data-tab="solution" role="tab" aria-selected="false" tabindex="-1">
+                  <span class="uc-toggle-dot"></span>
+                  Lumix Solution
+                </button>
+              </div>
+            </div>
+
+            <!-- Challenge View (Default) -->
+            <div class="uc-pane uc-pane-challenge active">
+              <h3 class="sticky-card-title">
+                Build Leaders Ready for the Moments That Matter
+              </h3>
+              <p class="sticky-card-desc">
+                Leaders grow by repeatedly practicing judgment, not consuming passive slides. Emerging and executive leaders often face their highest-stakes organizational crises with zero prior rehearsal.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Passive Theory &amp; Slide Decks
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Pressure Freeze in High Stakes
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Unrehearsed Boardroom Calls
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Unmeasured Executive Instinct
+                </span>
+              </div>
+            </div>
+
+            <!-- Solution View -->
+            <div class="uc-pane uc-pane-solution">
+              <div class="uc-solution-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Simulation-Led Practice</span>
+              </div>
+              <h3 class="sticky-card-title">
+                Pressure-Tested Judgment Through Dynamic Crisis Simulations
+              </h3>
+              <p class="sticky-card-desc">
+                Lumix immerses leaders in high-stakes simulations with unpredictable stakeholder AI personas. Leaders navigate complex tradeoffs, defend decisions, and receive instant behavioral coaching before real board moments.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Multi-Persona AI Drills
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Real-Time Judgment Scoring
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Safe Failure Testing Arena
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Measurable Executive Growth
+                </span>
+              </div>
+            </div>
+
+            <div class="sticky-card-footer">
+              <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-bronze-luxe btn-watermelon-marigold"
+                data-challenge-text="Explore Leadership Scenarios"
+                data-solution-text="Test Leadership Simulations">
+                <div class="gradient-background-wm" aria-hidden="true">
+                  <div class="gradient-background-wm-inner"></div>
+                </div>
+                <span class="btn-cta-text">Explore Leadership Scenarios</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image (Right Column) -->
+          <div class="sticky-card-image-box">
+            <img src="images/executive-leadership.jpg" alt="Leadership Development" loading="lazy" class="sticky-card-image">
+            <div class="sticky-card-image-overlay"></div>
+            <div class="sticky-image-badge" data-challenge="Executive Dilemma" data-solution="Simulation Mode">Executive Dilemma</div>
+
+            <!-- Subtle 4-Point Diamond Sparkle Star Accent -->
+            <svg class="sticky-star-accent" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z"
+                fill="url(#starGradMain1)" />
+              <defs>
+                <linearGradient id="starGradMain1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="1" stop-color="#d4af85" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2: People Leadership -->
+      <div class="sticky-card-wrapper" style="z-index: 2;">
+        <article class="sticky-card-frame">
+          <div class="sticky-card-content">
+            <div class="sticky-card-topbar">
+              <div class="sticky-card-eyebrow">
+                <span class="eyebrow-line"></span>
+                02 &bull; People Leadership
+              </div>
+
+              <div class="uc-toggle-pill" role="tablist" aria-label="Toggle Challenge and Solution for People Leadership">
+                <button type="button" class="uc-toggle-btn active" data-tab="challenge" role="tab" aria-selected="true" tabindex="0">
+                  <span class="uc-toggle-dot"></span>
+                  The Challenge
+                </button>
+                <button type="button" class="uc-toggle-btn" data-tab="solution" role="tab" aria-selected="false" tabindex="-1">
+                  <span class="uc-toggle-dot"></span>
+                  Lumix Solution
+                </button>
+              </div>
+            </div>
+
+            <!-- Challenge View -->
+            <div class="uc-pane uc-pane-challenge active">
+              <h3 class="sticky-card-title">
+                Turn Managers into Confident Coaches and Communicators
+              </h3>
+              <p class="sticky-card-desc">
+                Most managers never get to rehearse the difficult conversations that define team culture. Delicate performance feedback, underperformance talks, and conflict resolution are usually practiced on real employees with real fallout.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Delayed Feedback Talks
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Awkward 1-on-1 Friction
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Unresolved Team Conflict
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Uncomfortable Accountability
+                </span>
+              </div>
+            </div>
+
+            <!-- Solution View -->
+            <div class="uc-pane uc-pane-solution">
+              <div class="uc-solution-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Conversational AI Sparring</span>
+              </div>
+              <h3 class="sticky-card-title">
+                Zero-Risk Conversational Rehearsals with Real-Time Feedback
+              </h3>
+              <p class="sticky-card-desc">
+                Lumix provides interactive conversational sparring with emotionally responsive AI team members. Managers test different tones, calibrate empathy, and practice firmness until constructive coaching becomes second nature.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Difficult Feedback Drills
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Tone &amp; Empathy Calibration
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Live Conflict Resolution
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Constructive Accountability
+                </span>
+              </div>
+            </div>
+
+            <div class="sticky-card-footer">
+              <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-bronze-luxe btn-watermelon-marigold"
+                data-challenge-text="Explore Manager Simulations"
+                data-solution-text="Practice Coaching Scenarios">
+                <div class="gradient-background-wm" aria-hidden="true">
+                  <div class="gradient-background-wm-inner"></div>
+                </div>
+                <span class="btn-cta-text">Explore Manager Simulations</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="sticky-card-image-box">
+            <img src="images/people-leadership.jpg" alt="People Leadership and Coaching" loading="lazy" class="sticky-card-image">
+            <div class="sticky-card-image-overlay"></div>
+            <div class="sticky-image-badge" data-challenge="People Operations" data-solution="AI Coaching Active">People Operations</div>
+
+            <svg class="sticky-star-accent" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z" fill="url(#starGradMain2)" />
+              <defs>
+                <linearGradient id="starGradMain2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="1" stop-color="#d4af85" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 3: Succession Planning & Leadership Readiness -->
+      <div class="sticky-card-wrapper" style="z-index: 3;">
+        <article class="sticky-card-frame">
+          <div class="sticky-card-content">
+            <div class="sticky-card-topbar">
+              <div class="sticky-card-eyebrow">
+                <span class="eyebrow-line"></span>
+                03 &bull; Succession Planning &amp; Readiness
+              </div>
+
+              <div class="uc-toggle-pill" role="tablist" aria-label="Toggle Challenge and Solution for Succession Planning">
+                <button type="button" class="uc-toggle-btn active" data-tab="challenge" role="tab" aria-selected="true" tabindex="0">
+                  <span class="uc-toggle-dot"></span>
+                  The Challenge
+                </button>
+                <button type="button" class="uc-toggle-btn" data-tab="solution" role="tab" aria-selected="false" tabindex="-1">
+                  <span class="uc-toggle-dot"></span>
+                  Lumix Solution
+                </button>
+              </div>
+            </div>
+
+            <!-- Challenge View -->
+            <div class="uc-pane uc-pane-challenge active">
+              <h3 class="sticky-card-title">
+                Know Exactly Who Is Ready for What Comes Next
+              </h3>
+              <p class="sticky-card-desc">
+                Succession planning is often driven by tenure, internal politics, and subjective 9-box grids. Organizations guess whether a candidate can handle next-level complexity until they are already in the seat.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Subjective 9-Box Guesswork
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Unproven Role Readiness
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  High-Stakes Promotion Risk
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Hidden Leadership Blindspots
+                </span>
+              </div>
+            </div>
+
+            <!-- Solution View -->
+            <div class="uc-pane uc-pane-solution">
+              <div class="uc-solution-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Objective Capability Signals</span>
+              </div>
+              <h3 class="sticky-card-title">
+                Standardized Role Benchmarks &amp; Verified Readiness Proof
+              </h3>
+              <p class="sticky-card-desc">
+                Lumix tests successors in role-specific situational simulations. Executive teams observe how candidates prioritize, navigate ambiguity, and align stakeholders under pressure—replacing opinion with verified capability.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Next-Role Readiness Drills
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Objective Capability Signals
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Executive Stakeholder Alignment
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  De-Risked Succession Pipeline
+                </span>
+              </div>
+            </div>
+
+            <div class="sticky-card-footer">
+              <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-bronze-luxe btn-watermelon-marigold"
+                data-challenge-text="Explore Succession Scenarios"
+                data-solution-text="View Readiness Benchmarks">
+                <div class="gradient-background-wm" aria-hidden="true">
+                  <div class="gradient-background-wm-inner"></div>
+                </div>
+                <span class="btn-cta-text">Explore Succession Scenarios</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="sticky-card-image-box">
+            <img src="images/corporate-real-estate.jpg" alt="Succession Planning and Leadership Readiness" loading="lazy" class="sticky-card-image">
+            <div class="sticky-card-image-overlay"></div>
+            <div class="sticky-image-badge" data-challenge="Talent Pipeline" data-solution="Readiness Benchmarks">Talent Pipeline</div>
+
+            <svg class="sticky-star-accent" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z" fill="url(#starGradMain3)" />
+              <defs>
+                <linearGradient id="starGradMain3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="1" stop-color="#d4af85" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 4: Sales Capability & Readiness -->
+      <div class="sticky-card-wrapper" style="z-index: 4;">
+        <article class="sticky-card-frame">
+          <div class="sticky-card-content">
+            <div class="sticky-card-topbar">
+              <div class="sticky-card-eyebrow">
+                <span class="eyebrow-line"></span>
+                04 &bull; Sales Capability &amp; Readiness
+              </div>
+
+              <div class="uc-toggle-pill" role="tablist" aria-label="Toggle Challenge and Solution for Sales Capability">
+                <button type="button" class="uc-toggle-btn active" data-tab="challenge" role="tab" aria-selected="true" tabindex="0">
+                  <span class="uc-toggle-dot"></span>
+                  The Challenge
+                </button>
+                <button type="button" class="uc-toggle-btn" data-tab="solution" role="tab" aria-selected="false" tabindex="-1">
+                  <span class="uc-toggle-dot"></span>
+                  Lumix Solution
+                </button>
+              </div>
+            </div>
+
+            <!-- Challenge View -->
+            <div class="uc-pane uc-pane-challenge active">
+              <h3 class="sticky-card-title">
+                Prepare Reps for the Conversations That Win Deals
+              </h3>
+              <p class="sticky-card-desc">
+                Sales readiness ends with pitch decks and feature memorization. When reps face ruthless procurement officers, aggressive pricing pushback, or skeptical CFOs in the field, deals slip away.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Static Slide Deck Pitching
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Lost Deals on Price Objections
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Unprepared Discovery Calls
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Prolonged Rep Ramp Times
+                </span>
+              </div>
+            </div>
+
+            <!-- Solution View -->
+            <div class="uc-pane uc-pane-solution">
+              <div class="uc-solution-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Voice AI Buyer Arena</span>
+              </div>
+              <h3 class="sticky-card-title">
+                Dynamic AI Buyer Sparring with Realistic Deal Pushback
+              </h3>
+              <p class="sticky-card-desc">
+                Reps spar against voice-enabled AI buyer personas—from skeptical CFOs to stubborn procurement leads. Reps hone consultative discovery, objection defense, and negotiation psychology before setting foot in the field.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Enterprise Deal Simulations
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Price &amp; Competitor Objections
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Consultative Value Discovery
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  60% Faster Field Ramp
+                </span>
+              </div>
+            </div>
+
+            <div class="sticky-card-footer">
+              <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-bronze-luxe btn-watermelon-marigold"
+                data-challenge-text="Explore Sales Scenarios"
+                data-solution-text="Spar with AI Buyers">
+                <div class="gradient-background-wm" aria-hidden="true">
+                  <div class="gradient-background-wm-inner"></div>
+                </div>
+                <span class="btn-cta-text">Explore Sales Scenarios</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="sticky-card-image-box">
+            <img src="images/sales-readiness.jpg" alt="Sales Capability and Field Readiness" loading="lazy" class="sticky-card-image">
+            <div class="sticky-card-image-overlay"></div>
+            <div class="sticky-image-badge" data-challenge="Revenue Acceleration" data-solution="Buyer Sparring Arena">Revenue Acceleration</div>
+
+            <svg class="sticky-star-accent" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z" fill="url(#starGradMain4)" />
+              <defs>
+                <linearGradient id="starGradMain4" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="1" stop-color="#d4af85" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 5: Workforce Transformation & AI Readiness -->
+      <div class="sticky-card-wrapper" style="z-index: 5;">
+        <article class="sticky-card-frame">
+          <div class="sticky-card-content">
+            <div class="sticky-card-topbar">
+              <div class="sticky-card-eyebrow">
+                <span class="eyebrow-line"></span>
+                05 &bull; Workforce Transformation &amp; AI
+              </div>
+
+              <div class="uc-toggle-pill" role="tablist" aria-label="Toggle Challenge and Solution for Workforce Transformation">
+                <button type="button" class="uc-toggle-btn active" data-tab="challenge" role="tab" aria-selected="true" tabindex="0">
+                  <span class="uc-toggle-dot"></span>
+                  The Challenge
+                </button>
+                <button type="button" class="uc-toggle-btn" data-tab="solution" role="tab" aria-selected="false" tabindex="-1">
+                  <span class="uc-toggle-dot"></span>
+                  Lumix Solution
+                </button>
+              </div>
+            </div>
+
+            <!-- Challenge View -->
+            <div class="uc-pane uc-pane-challenge active">
+              <h3 class="sticky-card-title">
+                Build the Human Judgment Your Workforce Needs Alongside AI
+              </h3>
+              <p class="sticky-card-desc">
+                As enterprise AI tools rollout, teams either experience tool paralysis or blindly accept hallucinations. Employees lack the critical judgment required to interrogate, validate, and guide automated outputs.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Blind Acceptance of AI Outputs
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Hallucination Vulnerabilities
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Erosion of Critical Thinking
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Workflow Automation Anxiety
+                </span>
+              </div>
+            </div>
+
+            <!-- Solution View -->
+            <div class="uc-pane uc-pane-solution">
+              <div class="uc-solution-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Human-in-the-Loop Drills</span>
+              </div>
+              <h3 class="sticky-card-title">
+                Human Judgment &amp; Critical Thinking Sparring Alongside AI
+              </h3>
+              <p class="sticky-card-desc">
+                Lumix challenges employees with realistic problem-solving scenarios where AI outputs are deliberately flawed, ambiguous, or incomplete. Teams practice verification, ethical reasoning, and sound decision-making.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Critical Reasoning Drills
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  AI Output Interrogation
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Ambiguity &amp; Ethical Checks
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Human-in-the-Loop Mastery
+                </span>
+              </div>
+            </div>
+
+            <div class="sticky-card-footer">
+              <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-bronze-luxe btn-watermelon-marigold"
+                data-challenge-text="Explore AI Readiness"
+                data-solution-text="Try Cognitive Drills">
+                <div class="gradient-background-wm" aria-hidden="true">
+                  <div class="gradient-background-wm-inner"></div>
+                </div>
+                <span class="btn-cta-text">Explore AI Readiness</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="sticky-card-image-box">
+            <img src="images/ai-workforce.jpg" alt="Workforce Transformation and AI Readiness" loading="lazy" class="sticky-card-image">
+            <div class="sticky-card-image-overlay"></div>
+            <div class="sticky-image-badge" data-challenge="Future of Work" data-solution="Cognitive Drills Active">Future of Work</div>
+
+            <svg class="sticky-star-accent" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z" fill="url(#starGradMain5)" />
+              <defs>
+                <linearGradient id="starGradMain5" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="1" stop-color="#d4af85" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 6: Internal Mobility & Career Development -->
+      <div class="sticky-card-wrapper" style="z-index: 6;">
+        <article class="sticky-card-frame">
+          <div class="sticky-card-content">
+            <div class="sticky-card-topbar">
+              <div class="sticky-card-eyebrow">
+                <span class="eyebrow-line"></span>
+                06 &bull; Internal Mobility &amp; Career Growth
+              </div>
+
+              <div class="uc-toggle-pill" role="tablist" aria-label="Toggle Challenge and Solution for Internal Mobility">
+                <button type="button" class="uc-toggle-btn active" data-tab="challenge" role="tab" aria-selected="true" tabindex="0">
+                  <span class="uc-toggle-dot"></span>
+                  The Challenge
+                </button>
+                <button type="button" class="uc-toggle-btn" data-tab="solution" role="tab" aria-selected="false" tabindex="-1">
+                  <span class="uc-toggle-dot"></span>
+                  Lumix Solution
+                </button>
+              </div>
+            </div>
+
+            <!-- Challenge View -->
+            <div class="uc-pane uc-pane-challenge active">
+              <h3 class="sticky-card-title">
+                Turn Career Potential into Demonstrated Capability
+              </h3>
+              <p class="sticky-card-desc">
+                High-performing individual contributors want to advance, but lateral moves and promotions stall because managers cannot verify if someone has the soft skills and leadership instincts for the target role.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Stalled Internal Promotions
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Unverified Lateral Ability
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  IC-to-Lead Bottlenecks
+                </span>
+                <span class="sticky-card-tag tag-friction">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                  Turnover from Stagnation
+                </span>
+              </div>
+            </div>
+
+            <!-- Solution View -->
+            <div class="uc-pane uc-pane-solution">
+              <div class="uc-solution-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Role-Transition Flight Simulator</span>
+              </div>
+              <h3 class="sticky-card-title">
+                Pre-Promotion Flight Simulators &amp; Verified Readiness Tracks
+              </h3>
+              <p class="sticky-card-desc">
+                Employees rehearse the exact responsibilities, interpersonal friction, and cross-functional decisions their next role demands, building confidence and verified proof of readiness before day one.
+              </p>
+
+              <div class="sticky-card-tags">
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  IC-to-Manager Transitions
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Cross-Functional Mobility
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Targeted Practice Journeys
+                </span>
+                <span class="sticky-card-tag tag-solution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  Demonstrated Readiness Proof
+                </span>
+              </div>
+            </div>
+
+            <div class="sticky-card-footer">
+              <a href="https://tally.so/r/wM0JlY" target="_blank" class="btn-bronze-luxe btn-watermelon-marigold"
+                data-challenge-text="Explore Mobility Scenarios"
+                data-solution-text="Start Transition Pathways">
+                <div class="gradient-background-wm" aria-hidden="true">
+                  <div class="gradient-background-wm-inner"></div>
+                </div>
+                <span class="btn-cta-text">Explore Mobility Scenarios</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="sticky-card-image-box">
+            <img src="images/client-consultation.jpg" alt="Internal Mobility and Career Development" loading="lazy" class="sticky-card-image">
+            <div class="sticky-card-image-overlay"></div>
+            <div class="sticky-image-badge" data-challenge="Career Progression" data-solution="Readiness Verified">Career Progression</div>
+
+            <svg class="sticky-star-accent" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z" fill="url(#starGradMain6)" />
+              <defs>
+                <linearGradient id="starGradMain6" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="1" stop-color="#d4af85" stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -335,7 +1117,9 @@
   <section class="cta-section" id="capabilities">
     <div class="cta-container">
       <div class="cta-compass-wrapper">
-        <img class="cta-compass-img" src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Logo/compass_orange_coloured_needle_white_dial_black_bo_019f6754-1bfe-7ed7-a4d7-04d6def21662.svg" alt="Floating Compass">
+        <img class="cta-compass-img"
+          src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/Logo/compass_orange_coloured_needle_white_dial_black_bo_019f6754-1bfe-7ed7-a4d7-04d6def21662.svg"
+          alt="Floating Compass">
       </div>
       <h2 class="cta-powerline">Let the compass guide you towards capability.</h2>
 
@@ -367,8 +1151,9 @@
 
   <!-- Scroll-to-Top Button -->
   <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 15l-6-6-6 6"/>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6" />
     </svg>
   </button>
 
@@ -378,19 +1163,34 @@
       <!-- Brand Column -->
       <div class="footer-brand">
         <div class="footer-logo">
-          <img class="footer-logo-icon" src="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png" alt="Lumix Logo">
+          <img class="footer-logo-icon"
+            src="https://jvqrhvlq2gwmmcbo.public.blob.vercel-storage.com/logos_icons/Logo%20icon%20new.png"
+            alt="Lumix Logo">
           <span class="footer-logo-text">Lumix</span>
         </div>
-        <p class="footer-tagline">Build workplace capability through continuous practice and personalized AI-guided learning.</p>
+        <p class="footer-tagline">Build workplace capability through continuous practice and personalized AI-guided
+          learning.</p>
         <div class="footer-socials">
-          <a href="https://www.linkedin.com/company/getlumix" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          <a href="https://www.linkedin.com/company/getlumix" target="_blank" rel="noopener noreferrer"
+            class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+            </svg>
           </a>
-          <a href="https://x.com/getlumixhq" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (formerly Twitter)">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="https://x.com/getlumixhq" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="X (formerly Twitter)">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
           </a>
-          <a href="https://www.instagram.com/lumixsocial/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a href="https://www.instagram.com/lumixsocial/" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -407,7 +1207,8 @@
       <div class="footer-col">
         <span class="footer-col-title">Company</span>
         <a href="#">About</a>
-        <a href="https://lumi6.notion.site/Join-Lumi6-as-a-Founding-Intern-a4cc220014884891949e2808ab97f410" target="_blank">Careers</a>
+        <a href="https://lumi6.notion.site/Join-Lumi6-as-a-Founding-Intern-a4cc220014884891949e2808ab97f410"
+          target="_blank">Careers</a>
         <a href="mailto:hello@getlumix.co">Contact</a>
       </div>
 
@@ -430,6 +1231,7 @@
     </div>
   </footer>
 
-  <script type="module" src="js/main.js?v=22"></script>
+  <script type="module" src="js/main.js?v=25"></script>
 </body>
+
 </html>

@@ -64,7 +64,18 @@
   gap: 8px;
   cursor: pointer;
   color: #1a1a1a; /* Dark charcoal color matches branding logo text */
-  transition: color 0.5s;
+  text-decoration: none;
+  transition: opacity 0.3s ease, color 0.5s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.85;
+}
+
+.nav-logo:focus-visible {
+  outline: 2px solid #8a4b2f;
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 
 .navbar.scrolled .nav-logo {
@@ -76,6 +87,11 @@
   height: 28px;
   object-fit: contain;
   display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.nav-logo:hover .logo-compass {
+  transform: rotate(20deg) scale(1.08);
 }
 
 .logo-text {
@@ -95,45 +111,136 @@
   max-width: 0;
 }
 
-/* Menu Links */
+/* Menu Links (Compact Icon Navigation with Hover Tooltips) */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   list-style: none;
 }
 
 .nav-link {
   text-decoration: none;
-  font-family: 'Inter', sans-serif; /* Inter for navigation */
-  font-size: 0.95rem; /* ~15px */
-  font-weight: 500; /* Inter 500 (Medium) */
-  color: #1a1a1a; /* Black menu links when transparent */
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: rgba(26, 26, 26, 0.65);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), stroke 0.25s ease;
+  pointer-events: none;
 }
 
 .navbar.scrolled .nav-link {
-  color: #1a1a1a; /* Full opacity dark charcoal */
+  color: rgba(26, 26, 26, 0.65);
 }
 
 .nav-link:hover {
-  color: #1a1a1a;
-  background-color: rgba(26, 26, 26, 0.06);
+  color: #ff5533;
+  background-color: transparent;
+  transform: translateY(-1px);
+}
+
+.nav-link:hover .nav-icon {
+  stroke: #ff5533;
+  transform: scale(1.1);
 }
 
 .navbar.scrolled .nav-link:hover {
-  color: #1a1a1a;
-  background-color: rgba(26, 26, 26, 0.06);
+  color: #ff5533;
+  background-color: transparent;
 }
 
-.nav-link.active {
-  color: #1a1a1a;
+/* -------------------------------------------------------------
+   FLOATING HOVER TOOLTIP
+   Tactile micro-capsule showing the page/section name
+------------------------------------------------------------- */
+.nav-tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #0b192c;
+  color: #ffffff;
+  font-family: var(--font-neo, 'Inter', sans-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 
+    0 8px 24px -4px rgba(11, 25, 44, 0.28),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  z-index: 1200;
 }
 
+/* Micro Arrow Caret */
+.nav-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  background: #0b192c;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.nav-link:hover .nav-tooltip,
+.nav-link:focus-visible .nav-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* -------------------------------------------------------------
+   ACTIVE / SELECTED PAGE & SECTION HIGHLIGHT
+   Highlights the symbol directly in Lumix icon orange (#ff5533)
+   with NO surrounding box and NO status dot.
+------------------------------------------------------------- */
+.nav-link.active,
 .navbar.scrolled .nav-link.active {
-  color: #1a1a1a;
+  color: #ff5533 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.nav-link.active .nav-icon {
+  stroke: #ff5533 !important;
+  stroke-width: 2.3;
+  transform: scale(1.15);
+  filter: drop-shadow(0 2px 8px rgba(255, 85, 51, 0.45));
+}
+
+.nav-link.active:hover .nav-icon {
+  transform: scale(1.2);
+}
+
+.nav-link.active .nav-tooltip {
+  border-color: rgba(255, 85, 51, 0.4);
 }
 
 /* Action Buttons */
